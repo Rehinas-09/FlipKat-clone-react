@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "inter-Bold";
+    src: url('../Assets/fonts/Inter-Bold\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "inter-Regular";
+    src: url('../Assets/fonts/Inter-Regular\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "inter-SemiBold";
+    src: url('../Assets/fonts/Inter-SemiBold\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "roboto-medium";
+    src: url('../Assets/fonts/roboto-medium\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "roboto-regular";
+    src: url('../Assets/fonts/roboto-regular\ \(1\).woff2') format('woff2');
+}
+
+
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+.container{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.containerSub{
+    display: flex;
+    justify-content: center;
+    width:100%; 
+}
+.header{
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 28px;
+    z-index: 999;
+}
+.sectionA{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.filpIcon{
+    margin-right: 36px;
+}
+.filpIconLink{
+    text-decoration: none;
+} 
+.iconImage{
+    width: 160px;
+    height: 40px; 
+} 
+.input{
+    width: 100%;
+}
+.input::placeholder{
+     font-size: 17px; 
+     display: flex;
+     align-items: center;
+     font-family: "inter-Regular"; 
+}
+.form{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color:#f0f5ff;
+}
+.subForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; 
+}
+.button{
+    height:40px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 8px 8px 8px 12px;
+    background-color: transparent;
+    border: none;
+}  
+.svg{
+    width: 24px;
+    height: 24px;
+}
+.inputBox{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+}
+.input{
+    border: 0;
+    outline: 0;
+    font-size: 17px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: transparent;
+} 
+.sectionB{
+    display: flex;
+    align-items: center;
+}
+.login{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.loginAlign{
+    position:relative;
+    display:flex;
+    align-items: center;
+    border:  1px solid transparent;
+    padding: 8px;
+}
+.loginAnger{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000;
+}
+.loginImg{
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+.loginTitle{
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    font-family: "inter-Regular";
+}
+.downArrow{
+    width:12px;
+    height:12px; 
+    margin-left: 8px;
+}
+.cartTitle{
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: "inter-Regular";
+}
+.menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    padding: 8px;
+}  
+.tagA{
+    display: flex;
+    align-items: center;
+}
+.menuItem{
+    width: 210px;
+    right:0;
+    display: "block";
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    min-width: 100px;
+    box-shadow: 0 4px 16px 0 rgba(0,0, 0, .1);
+    z-index:100;
+    border-radius: 8px;
+}
+.menuItemList{
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.list{
+    border-bottom: none;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    white-space:nowrap; 
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.menuImg{
+    width: 18px;
+    height: 18px;
+}
+.LoginList{
+    width:280;
+    position:absolute;
+    top:100%;
+    list-style: none;
+    background-color: #fff;
+    border:1px solid #f0f0f0;
+    min-width: 100px;
+    box-shadow:0 4px 16px 0 rgba(0,0, 0, .1);
+    border-radius: 8px;
+}
+.newCustom{
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+    .newCustomer{
+    color: #000;
+}
+.sign{
+   color: #2a55e5;
+   font-family: "inter-Semibold"; 
+}
