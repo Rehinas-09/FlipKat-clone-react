@@ -10,26 +10,33 @@ import notification from './images/notification.svg'
 import help from './images/help.svg'
 import advertise from './images/advertise.svg'
 import download from './images/download.svg'
-
+import mobileMenu from './images/mobileMenu.svg'
+import icon2 from './images/icon2.svg'
+import mobile from './images/mobile.svg'
 function Navbar() {
     const [isHoved,setisHoverd]=useState(false) 
     const [isMenu,setisMenu]=useState(false)
-    
+     
   return ( 
     <div className={styles.container}>
         <div className={styles.containerSub}>
-            <nav className={styles.header}>
+          <div className={styles.alignment}></div>
+            <nav className={styles.header}> 
               <div className={styles.sectionA}>
                 <div className={styles.filpIcon}>
-                    <a className={styles.filpIconLink}>
-                        <img className={styles.iconImage} src={icon}></img>
+                    <a className={styles.mb}>
+                      <img className={styles.mobileIcon} src={mobileMenu} />
                     </a>
-                </div>
-                <div className={styles.input} >
+                    <a className={styles.filpIconLink}>
+                        <img  src={icon} className={styles.icon1}/>
+                        <img src={icon2} className={styles.icon2}/>
+                    </a> 
+                </div> 
+                <div className={styles.input} >  
                     <form className={styles.form}>
                       <div className={styles.subForm}>
                        <button className={styles.button} type='submit'>
-                         <svg className={styles.svg} width="24" height="24" class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                         <svg className={styles.svg} width="24" height="24"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                        </button> 
                        <div className={styles.inputBox}> 
                           <input type='text' placeholder="Search for Products, Brands and More" className={styles.input}/>
@@ -40,15 +47,22 @@ function Navbar() {
 
               </div> 
               <div className={styles.sectionB}>
-                <div className={styles.login} >
+                <div className={styles.loginPart}>
+                      <div className={styles.login} >
+                          <a href='#' className={styles.loginAnger}>
+                        <img src={mobile} className={styles.loginImg}/>
+                        </a>
+                    </div> 
+                    <div className={styles.login} >
                       <div className={styles.loginAlign} onMouseOver={()=>setisHoverd(true)} onMouseLeave={()=>setisHoverd(false)} style={{backgroundColor:isHoved?"#2a55e5":"white",borderRadius:isHoved?"8px":"none"}} > 
                         <a href="#" className={styles.loginAnger}> 
                             <img className={styles.loginImg} src={login} />
                             <span className={styles.loginTitle} style={{color:isHoved?"white":"#000"}}>Login</span>
                         </a>
                         <img className={styles.downArrow} src={downArrow}/>
-
-                        { 
+                        </div>
+                      </div> 
+                         {/* {  
                          isHoved?(
                             <ul className={styles.loginList}>
                                 <a href="#" className={styles.newCustom}>
@@ -59,11 +73,10 @@ function Navbar() {
                             </ul>
                          ):(
                              <div></div>
-                         )
-
-                        }
-                      </div>
-                </div>
+                         )  
+                        } */}
+                  </div>  
+                         
                 <div className={styles.login}> 
                    <a href='#' className={styles.loginAnger}>
                     <img src={cart} className={styles.loginImg}  />
@@ -127,7 +140,7 @@ function Navbar() {
               </div>
              
             </nav>
-        </div>
+        </div> 
      
       
     </div>

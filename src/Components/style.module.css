@@ -232,19 +232,154 @@ body{
     box-shadow:0 4px 16px 0 rgba(0,0, 0, .1);
     border-radius: 8px;
 }
-.newCustom{
+.newCustom{ 
     padding: 12px;
     border-bottom: 1px solid #e0e0e0;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
-    display: flex;
+    display:flex;
     justify-content: space-between;
-}
-    .newCustomer{
+} 
+    .newCustomer{ 
     color: #000;
 }
 .sign{
    color: #2a55e5;
    font-family: "inter-Semibold"; 
+}
+.mb{
+    display: none;
+}
+.icon2{
+    display:none;
+}
+.login:nth-child(1){
+   display: none;
+}
+.categoryContainer{
+    height: 126px;
+    background-color: rgba(225,255,255);
+    margin-top: 0;
+
+}
+.subCategory{
+    background-color: rgb(255,255,255);
+    margin: 0px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: centerss;
+    position: relative; 
+    text-decoration: none;
+}
+.categories{
+    background-color: #fff;
+    min-height: 126px;
+    position: relative;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    color: #111112; 
+}
+.categoryLink{
+    padding-left: 24px;
+    min-width: 90px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    color: #333;
+}
+.categoryContent{
+ s   
+}
+.categoryImage{
+    
+}
+@media screen and (max-width:1024px) {
+    .cartTitle{
+        display: none;
+    }
+    .header{
+        padding: 12px;
+        max-width: 996px;
+    }
+    .sectionA{
+        flex-grow: 1;
+        display:flex;
+        align-items: center;
+    }
+    .login{
+        padding: 0 16px;
+    } 
+    .icon2{
+        display:none;
+    }
+    .input{
+        display: flex;
+        align-items: center;
+    }
+    .login:nth-child(1){ 
+        display: none;
+    }
+}
+@media screen and (max-width:425px) {
+    .header{
+        padding: 4px 16px;
+    }
+    .mb{
+        display: flex;
+    }
+    .input{
+        display: none;
+    }
+    .filpIcon{
+        display: flex;
+        align-items: center;
+    }
+    .login:nth-child(3){
+        display: none;
+    }
+    .downArrow{
+        display: none;
+    }
+    .login:nth-child(4){
+        display: none;
+    }
+    .icon1{
+        display: none;
+    }
+    .icon2{
+        display: flex;
+        height: 40px;
+      
+    }
+    .mobileIcon{ 
+        margin-right: 29px;
+    }
+        .login:nth-child(1){
+        display: inline-block;
+        
+    }
+    .loginAlign{
+        padding: 0;
+    }
+     .loginAnger{
+        display: flex;
+     }
+    .login{
+        display: inline-block;
+        padding: 0;
+    }
+    .loginImg{
+        margin-left:12px ;
+        margin-right: 0;
+        padding: 0;
+    }
+    .loginTitle{
+        margin-left: 4px;
+    }
+
+    
 }
