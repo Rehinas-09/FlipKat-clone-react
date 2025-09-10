@@ -9,12 +9,19 @@
   overflow-x: hidden;
 }
 .main-section{
-   display:flex;
-   flex: 1;
-   justify-content: center;
-   margin:0 16px; 
-   margin-top: 8px;
+  flex: 1;
 }
+.main-subSection{
+  display: flex;
+  justify-content: center;
+  margin: 0 16px;
+}
+.sub{
+  max-width: 1600px;
+  margin-top: 8px; 
+  width: 100%;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -25,6 +32,11 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   } 
+}
+@media screen and (max-width:1024px){
+     .sub{
+      max-width: 1024px; 
+     }
 }
 
 

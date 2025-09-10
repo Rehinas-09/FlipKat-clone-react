@@ -10,24 +10,33 @@ function Category() {
     },[])
   return (
     <div className={styles.categoryContainer}>
-       <div className={styles.subCategory}>
-         <div className={styles.categories}>
-           {
-            data.map((value,index)=>(
-                <a key={index} className={styles.categoryLink}>
-                        <div className={styles.categoryContent}>
-                            <div className={styles.categoryImage}>
-                                
-                            </div>
-                            <span> 
-                                {value.category}
-                            </span>
-                        </div>
+        <div className={styles.categorySub}>
+          <div className={styles.catAlign}>
+            {
+              data.map((value)=>(
+                <a className={styles.catAnger} key={value.id}>
+                  <div className={styles.catElement}>
+                     <div className={styles.catImg}>
+                       <img className={styles.catImage} src={value.img} style={{width:"64px",height:"64px"}}/>
+                     </div>
+                     <span className={styles.catName}>
+                     <span >
+                       {value.category}
+                     </span>
+                     {
+                      (value.id===3||value.id===4||value.id===5||value.id===8)&&(
+                        <span className={styles.categoryArrow}></span>
+                      )
+                     }   
+                     </span>
+                     
+                  </div>
                 </a>
-            ))
-           }
-         </div>
-        </div> 
+              ))
+            } 
+          </div>
+        </div>
+  
     </div>
   )
 } 

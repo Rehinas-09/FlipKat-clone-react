@@ -8,7 +8,11 @@ function App() {
     <div className="App">
       <Navbar/>
       <div className="main-section">
-           <Category/>
+        <div className="main-subSection">
+           <div className='sub'>
+           <Category/> 
+           </div>
+           </div>
       </div>
     
     </div> 
