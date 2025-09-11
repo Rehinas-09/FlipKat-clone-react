@@ -51,7 +51,7 @@ function Navbar() {
                       <div className={styles.login} >
                           <a href='#' className={styles.loginAnger}>
                         <img src={mobile} className={styles.loginImg}/>
-                        </a>
+                       </a> 
                     </div> 
                     <div className={styles.login} >
                       <div className={styles.loginAlign} onMouseOver={()=>setisHoverd(true)} onMouseLeave={()=>setisHoverd(false)} style={{backgroundColor:isHoved?"#2a55e5":"white",borderRadius:isHoved?"8px":"none"}} > 
@@ -70,7 +70,7 @@ function Navbar() {
                                   <span className={styles.sign}>Sign Up</span>
                                 </a>
                             
-                            </ul>
+                            </ul> 
                          ):(
                              <div></div>
                          )  

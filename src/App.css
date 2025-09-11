@@ -38,8 +38,14 @@
       max-width: 1024px; 
      }
 }
-
-
+@media screen and (max-width:425px) {
+  .main-subSection{ 
+    margin: 0;
+  } 
+  .sub{
+    margin-top: 0;
+  }
+} 
  
 
 

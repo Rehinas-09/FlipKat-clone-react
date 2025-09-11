@@ -27,7 +27,11 @@
    box-sizing: border-box;
 }
 body{
-    background-color: gray;
+    scrollbar-width: none;
+    -ms-overflow-style:none
+}
+body::-webkit-scrollbar{
+    display:none
 }
 .container{
     background-color: #fff;
@@ -68,6 +72,12 @@ body{
 } 
 .input{
     width: 100%;
+    border:0;
+    outline:0;
+    font-size: 17px;
+    height: 40px;
+    background-color: transparent;
+    font-family: 'inter-Regular';
 }
 .input::placeholder{
      font-size: 17px; 
@@ -103,10 +113,12 @@ body{
 }
 .inputBox{
     position: relative;
-    display: inline-block;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background-color: transparent;
-}
+}   con
 .input{
     border: 0;
     outline: 0;
@@ -162,7 +174,7 @@ body{
 .cartTitle{
     color: #000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px;  
     line-height: 24px;
     text-align: center;
     display: flex;
@@ -286,12 +298,18 @@ body{
 .catAnger{
     min-width:90px;
     padding: 16px;   
-    cursor: pointer;
-    padding-left: 24px;
+    cursor: pointer; 
     text-decoration: none;
     cursor: pointer;
     box-sizing: content-box;
     color: #333;
+    
+}
+.catAnger:nth-child(9){
+    padding-left: 24px;
+}
+.catAnger:nth-child(1){
+    padding-left: 24px;
 }
 .catElement{
     align-items: center;
@@ -336,6 +354,90 @@ body{
     margin-left: 8px; 
 
 }
+.slider{
+    margin-top: 16px;
+    background-color: rgba(255,255,255);
+    margin-top: 16px;
+} 
+.Slidersub{
+    background-color: rgb(255,255,255); 
+    margin:0px 0px 16px; 
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+   
+}
+.sidebar{
+    padding: 8px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.SlidebarSub{
+    width: 12px;
+    height: 4px;
+    border-radius: 2px;
+    border-color: rgb(0,0,0,0.13);
+    border-style: solid;
+    margin-right: 4px;
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+
+}
+.bigBillion{
+    margin-top: 16px;
+    background-color:rgb(255,255,255);
+    margin-top: 0px; 
+}
+.bigBillionSub{
+    background-color: rgb(255,255,255);
+    margin:0px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+} 
+.bigBillionAnger{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    border:#000 solid;
+    border-color: transparent;
+}
+.slideButtonOne{
+    display: flex;
+    position: absolute;
+    width:40px;
+    background-color: #fff;
+    height: 88px;
+    top:0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    box-shadow: 0 1px rgba(0,0,0,.12);
+}
+.ImgDiv{
+    position: relative;
+}
+.slideButtonTwo{
+    position: absolute;
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    width: 40px;
+    background-color: #fff;
+    height: 88px;
+    top:0;
+    right: 0;
+    bottom:0; 
+    margin: auto 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+   
 @media screen and (max-width:1024px) {  
     .cartTitle{
         display: none;
@@ -371,7 +473,8 @@ body{
     .categoryContainer{
         height:135px;
     
-    }
+    } 
+   
     
   
 }
@@ -432,6 +535,28 @@ body{
     .loginTitle{
         margin-left: 4px;
     }
-
+    .catAnger:nth-child(0){
+        padding: 12px 12px 8px 24px;
+    }
+    .catAnger:nth-child(2n){
+        padding:12px 12px 8px 12px;
+    }
+    .catImg{
+        margin-bottom: 4px;
+        
+    } 
+    .catName{
+        font-family: 'inter-Regular';
+        font-size: 12px; 
+        line-height: 16px; 
+    } 
+    .catName:nth-child(1){
+        display: block;
+    }
+    .categoryContainer{
+        height:127px;
+    }
+  
+   
     
 }
