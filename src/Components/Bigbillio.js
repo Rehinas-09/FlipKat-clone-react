@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './style.module.css'
 function Bigbillio() {
   return (
-    <div style={{marginTop:"16px",width:"100%"}}>
+    <div style={{marginTop:"14px",width:"100%"}}>
        <div className={styles.bigBillion}>
               <div className={styles.bigBillionSub}>
               <a href="#" className={styles.bigBillionAnger}>

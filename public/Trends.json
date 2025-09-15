@@ -1,0 +1,44 @@
+[
+    {
+     "id":1,
+     "name":"PUMA, ADIDA...",
+      "des":"Min. 65% Off"
+    },
+    {
+      "id":2,
+      "name":"Top Selling St...",
+      "des":"From ₹49"
+    },
+    {
+        "id":3,
+        "name":"Geared Cycles",
+        "des":"Upto 70% Off"
+    },
+    {
+        "id":4,
+        "name":"Remote Contr...",
+        "des":"Upto 80% Off"
+    },
+    {
+        "id":5,
+        "name":"Soft Toys",
+        "des":"Upto 70% Off"
+    },
+    {
+        "id":6,
+        "name":"Toys and Gam...",
+        "des":"Upto 80% Off"
+
+    },
+    {
+        "id":7,
+        "name":"Coffee Powder",
+        "des":"Upto 80% Off"
+
+    },
+    {
+        "id":8,
+        "name":"Dry Fruits",
+        "des":"Upto 75% Off"
+    }
+] 

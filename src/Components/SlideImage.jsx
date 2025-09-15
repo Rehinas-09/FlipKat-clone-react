@@ -15,35 +15,41 @@ function SlideImage() {
         },5000)
         return()=>clearInterval(intervel)
     },[image]) 
-  return (   
+  return (    
     <>
     <div className={styles.slider}>
-        <div className={styles.slidersub}>
-        <div className={styles.ImgDiv}>    
+        <div className={styles.slidersub} style={{position:'relative'}}>
+     
        {
           image.length>0&&(
             <img src={image[index]} style={{width:"100%",margin:"auto",objectFit:"cover"}}
             alt="slider" 
-             />
+             /> 
           )
        }
              <button className={styles.slideButtonOne}>
+               <span className={styles.slideButtonspan}>
+               </span>
             
           </button>
           <button className={styles.slideButtonTwo}>
-            
+            <span className={styles.slideButtonspanTwo}>
+  
+            </span>
           </button>
-          </div>
+  
        <div className={styles.sidebar}>
-           <div className={styles.SlidebarSub}></div>
-           <div className={styles.SlidebarSub}></div>
-           <div className={styles.SlidebarSub}></div>
-           <div className={styles.SlidebarSub}></div>
-           <div className={styles.SlidebarSub}></div>
-           <div className={styles.SlidebarSub}></div>
-      
+          {
+            image.map((_,i)=>(
+              <div key={i} className={`${styles.SlidebarSub} ${
+                i=== index? styles.active:""
+              }`}> 
+              </div>
+            ))
+          }
+        
        </div> 
-     </div>
+     </div> 
  
     </div> 
    
