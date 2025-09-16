@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './style.module.css'
-function SlideImage() {
+function SlideImage() { 
     const [image,setImage]=useState([])
     const [index,currentIndex]=useState(0)
     useEffect(()=>{
@@ -47,7 +47,7 @@ function SlideImage() {
               </div>
             ))
           }
-        
+         
        </div> 
      </div> 
  

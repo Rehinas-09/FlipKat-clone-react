@@ -29,7 +29,7 @@ function TopDeals(props) {
      } 
      const handleClickLeft=()=>{ 
          if(startIndex-2>=0){ 
-            setStartIndex(startIndex-2)
+            setStartIndex(startIndex-2) 
          }
      }
     const visibleProduct=data.slice(startIndex,startIndex+visibleContent)
@@ -53,6 +53,7 @@ function TopDeals(props) {
                             <div className={styles.singleProduct}>
                                 <div className={styles.singleProductMid}>
                                 <div className={styles.singleProductSub}>
+                                    <div className={styles.singleP}>
                                     <div className={styles.topProducts}>
                                         <img src={value.img} className={styles.TopDelasImages}/>
                                     </div>
@@ -60,12 +61,14 @@ function TopDeals(props) {
                                         <p className={styles.topContentOne}>{value.name}</p>
                                         <p className={styles.contentOffer}>{value.des}</p>
                                     </div>
+                                 </div>
+                                <div>
+                                 <svg  className={styles.topDealsArrow} width="16" height="16" fill="none" viewBox="0 0 17 17" style={{marginRight:"8px"}}><path d="m6.627 3.749 5 5-5 5" stroke="#111112" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg> 
+                               </div>
                                   
                                 </div>
                                 </div> 
-                                  <div>
-                                 <svg  className={styles.topDealsArrow} width="16" height="16" fill="none" viewBox="0 0 17 17" style={{marginRight:"8px"}}><path d="m6.627 3.749 5 5-5 5" stroke="#111112" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg> 
-                               </div>
+                                  
                             </div>
 
                         ))
