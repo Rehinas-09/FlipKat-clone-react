@@ -378,12 +378,12 @@ body::-webkit-scrollbar{
 }
 .sidebar{
     padding: 8px;
-    padding-top: 7px;
+    padding-top: 5px;
     padding-bottom: 11px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 .SlidebarSub{
     width: 12px; 
@@ -437,7 +437,6 @@ body::-webkit-scrollbar{
     flex-direction: column;
     align-items: stretch;
     position: relative;
-    border:#000 solid;
     border-color: transparent;
 }
 .slideButtonOne{
@@ -533,15 +532,12 @@ body::-webkit-scrollbar{
     display: flex;
     flex:1 1 0%;
     flex-direction: row;
-    align-items: stretch;
-    border-width: 0px;
-    min-height: 0px;
-    min-width: 0px;
+    align-items: stretch; 
     position: relative; 
     
 }
 .topDealsAlign{
-    display:  flex;
+    display:flex;
     flex:1 1 0%;
     flex-direction: row;
     align-items: center;
@@ -549,11 +545,13 @@ body::-webkit-scrollbar{
     padding: 16px;
 }
 .topDealsHead{
-    color: (31,31,31);
+    color:#1f1f1f;
     display: inline;
-    white-space: nowrap;
     max-width: 100%;
+    white-space: nowrap;
     font-size:22px;
+    letter-spacing: -0.02px;
+    line-height: 30px;
     font-family: "inter-Semibold";
 }
 .topDealContent{
@@ -932,6 +930,299 @@ body::-webkit-scrollbar{
     line-height: 20px;
     font-family: "inter-Semibold";
 }
+.topPicksContainer{
+    background-color:rgb(255,255,255);
+    margin-top:0;
+    grid-column:1/5;
+}
+.topPicksContainerMid{
+    background-color: rgb(255,255,255);
+    margin: 0px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: stretch; 
+    height: 100%;
+    width: 100%;
+}
+.topPicksContainerSub{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+.topPicksHead{
+    display: flex;
+    align-items: center;
+    flex: 1 1 0%;
+    min-height: 72px;
+    flex-direction: row;
+    position: relative;
+}
+.topPicksHeadMid{
+    display: flex;
+    flex:1 1 0%;
+    flex-direction: row;
+    align-items: center;
+    min-height: 80px;
+    position: relative;
+    padding: 16px;
+}
+.topPicksHeadOne{
+   display: flex;
+   flex:1 1 0%;
+   flex-direction: column;
+   align-items: stretch;
+   position: relative;
+   justify-content: center;
+}
+.topPicksHeadTwo{
+   display:flex;
+   flex-basis:auto;
+   flex-direction: column;
+   align-items: stretch;
+   position: relative;
+}
+.topPicksTitle{
+    color: rgb(31,31,31);
+    display: inline;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: -.02px;
+    font-family: "inter-Semibold";
+}
+.topPicksSvg{
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    border-radius: 42px;
+    background-color: rgb(42,85,229);
+}
+.topPicksContent{
+    background: linear-gradient(rgb(255,255,255),(255,255,255));
+}
+.topPicksContentMid{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    flex-flow: wrap;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 4px;
+}
+.topPicksS{
+    display: flex;
+    flex-basis: 50%;
+    max-width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+.topPicksSMid{
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.topPicksSub{
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+}
+.topPicksP{
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    position: relative;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.topPicksImg{
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex:1 1 0%;
+   
+}
+.topPicksImage{
+    filter: none;
+    opacity: 1;
+    transition: filter 0.5s, opacity 0.5s easy-in-out;
+    width:100%;
+    display: block;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    
+}
+.topPickDetails{
+    display:flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    padding-top: 16px;
+}
+.topPicksOne{
+    display:inline;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -.01px;
+    font-family: "inter-Regular";
+}
+.topPicksTwo{
+     display: flex;
+     flex-direction: row;
+     flex-basis: auto;
+     align-items: stretch;
+     position: relative;
+     flex-shrink: 0;
+
+}
+.topPicksTwoSub{
+    display: inline;
+    white-space: nowrap;
+    max-width: 100%;
+    font-family: "inter-Semibold";
+    font-size: 17px;
+    letter-spacing: -0.01px;
+    line-height: 24px;
+    color:rgb(16,137,52)
+}
+.topSellingContainer{
+    cursor:pointer;
+    grid-column: 5/13;
+}
+.topSellingMid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+} 
+.topSellingSub{
+    aspect-ratio: 933.32/622.65;
+}
+.topSellingPic{
+     filter: none;
+    opacity: 1;
+    transition: filter 0.5s, opacity 0.5s easy-in-out;
+    width:100%;
+    margin: auto;
+    display: block;
+     object-fit: cover;
+     aspect-ratio: 933.32/622.65;
+    
+}
+.mainContainerSP{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    column-gap: 16px;
+    margin-bottom: 16px;
+}
+ .singleP{
+    display: flex;
+    flex:1 1 0%;
+    flex-direction: column;
+    align-items:center ;
+    position: relative; 
+    width: 108px;
+ }
+ .footerContainer{
+    background-color: #172337;
+    min-width: 978px;
+    border: 1px solid #ddd;
+    margin-top: 25px;
+ }
+ .footer{
+    width:100%;
+    margin:0 auto;
+    text-align:left;
+
+ }
+ .footerSecOne{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    padding: 40px 60px 0;
+    column-gap: 20px;
+ }
+ .footerSecTwo{
+    border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 40px;
+    width:100%; 
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+ } 
+ .footerHead{
+    color:#878787;
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+ }
+ .footerLink{
+    font-family: 'inter-Semibold';
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    line-height: 18px;
+    letter-spacing: 0;
+    
+ }
+ .footerSecondHead{
+    border-left: 1px solid #454d5e;
+    padding-left: 32px;
+    font-size: 12px;
+    white-space: nowrap;
+ }
+.footerHeadTwo{
+      color:#878787;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.footerPara{
+    margin-bottom: 16px;
+}
+.fpara{
+    white-space: nowrap;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "inter-Regular";
+    letter-spacing: 0;
+}
+.footerIconHead{
+    display:flex;
+    align-items: center;
+}
+.footerIconDiv{
+    margin-right: 16px;
+}
+.footerNumber{
+    color: #2874f0;
+}
+.footerIconT{
+    color: #fff;
+    margin-left: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "inter-Regular";
+}
 @media screen and (max-width:1024px) {  
     .cartTitle{
         display: none;
@@ -991,14 +1282,38 @@ body::-webkit-scrollbar{
     height:274px;
     overflow-x: scroll;
    }
-   .topContent{
-    align-items: center;
-    justify-content: center;
+   .topDealsAlign{
+    padding: 16px 12px;
    }
+   .singleProductSub{
+      display:flex;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      justify-content: space-between;
+      padding: 12px 24px;
+   }
+   .topDealContentMid{
+    padding-left: 6px;
+    padding-right: 6px;
+   }
+   .singleProduct{
+    width:172px;
+   }
+   .topContent{
+
+    align-items: center;
+    flex-direction: column; 
+    flex:1 1 0%;
+   }
+  
    .TopDelasImages{
     width: 108px;
     height: 108px;
     margin: 0;
+   }
+   .contentOffer{
+    overflow-wrap: normal;
    }
    .topProducts{
     display: inline-block;

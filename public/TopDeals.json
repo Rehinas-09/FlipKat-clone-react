@@ -2,40 +2,48 @@
     {
        "img":"http://rukminim1.flixcart.com/image/96/96/xif0q/water-geyser/m/9/7/-original-imahd77j8jh7hmge.jpeg?q=60",
         "name":"Fans & Geysers",
+        "Fname":"Fans & Geysers",
         "des":"From ₹999"
     },
     {
         "img":"https://rukminim1.flixcart.com/image/96/96/xif0q/water-purifier/a/u/x/-original-imahdt5pq9bzzstb.jpeg?q=60",
         "name":"Home Essentials",
-        "des":"Shop Now!"
-    },
+        "Fname":"Home Essenti...",
+        "des":"Shop Now!" 
+    }, 
     {
        "img":"https://rukminim1.flixcart.com/image/96/96/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=60",
        "name":"Projector",
+       "Fname":"Projector",
        "des":"From ₹6990"
     },
       {  "img":"https://rukminim1.flixcart.com/image/96/96/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=60",
         "name":"Best Selling Mobile S...",
+        "Fname":"Best Selling M...",
         "des":"From ₹499"
     }, 
     {
         "img":"https://rukminim1.flixcart.com/image/240/240/xif0q/monitor/8/z/l/32sb2qa-full-hd-31-5-2025-um-js2si-a07-acer-original-imahd7zz4fwfggud.jpeg?q=60",
         "name":"Monitors",
+         "Fname":"Monitors",
         "des":"From ₹6599" 
     },
     {
         "img":"https://rukminim1.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60",
-        "name": "Fasttrack Smartwatches",
-        "des":"From ₹1,399"
+        "name": "Fasttrack Smartwatc...",
+        "Fname":"Fasttrack Smar...",
+        "des":"From ₹1,399" 
     },
     {
         "img":"https://rukminim2.flixcart.com/image/96/96/xif0q/printer/s/8/d/-original-imafkykednshkhx5.jpeg?q=60",
         "name":"Printers",
+        "Fname":"Printers",
         "des":"From ₹2336"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/96/96/xif0q/monitor/c/3/u/-original-imah9hc6zk6wkjcz.jpeg?q=60",
         "name":"Monitors",
+        "Fname":"Monitors",
          "des":"From ₹7949"
     }
 ]
