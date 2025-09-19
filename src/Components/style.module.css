@@ -1222,7 +1222,109 @@ body::-webkit-scrollbar{
     font-size: 12px;
     line-height: 18px;
     font-family: "inter-Regular";
+    text-decoration: none;
 }
+
+.belowFooter{
+    display: flex;
+    align-items: center;
+}
+.footerDate{
+    color: #fff;
+    font-family: "inter-Regular";
+    letter-spacing: 0;
+    font-size: 12px;
+}
+.loginItem{
+    width:280px;
+    position: absolute;
+    top:100%;
+    left:-4px; 
+    background-color: #fff; 
+    border: 1px solid #f0f0f0;
+    min-width:100px;
+    box-shadow:0 4px 16px 0 rgba(0,0, 0, .1);
+    border-radius: 8px;
+    
+}
+.loginItemSUb{
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.loginItemMid{
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 8px 12px;
+    text-decoration:none;
+}
+.loginItemImage{
+    width:18px;
+   height: 18px; 
+}
+.loginItemDiv{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    text-decoration: none;
+}
+.loginItemprofile{
+    color:#000;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    font-family: "inter-Regular"; 
+    text-decoration: none;
+}
+.styleContainer{
+    display:flex;
+    position: absolute;
+    box-shadow:0 8px 8px 1px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    font-family:"inter-Regular";
+    line-height: 20px;
+    z-index: 99;
+    
+}
+.styleContainerSub{
+    min-width:240px;
+}
+.styleContainerSubT{  
+    min-height: 100%;
+    min-width:240px;
+    box-shadow: 0 8px 8px 1px rgba(0,0, 0, .1);
+}
+.styleObject{
+    display: flex;
+    flex-direction: column;
+
+}
+.styleContent{
+    background-color:#fff;
+    font-family: "inter-Regular";
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px; 
+}
+.stylespan{
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width:1024px) {  
     .cartTitle{
         display: none;
@@ -1252,8 +1354,10 @@ body::-webkit-scrollbar{
     } 
     .catAlign{
        overflow-x: scroll;
+       display:flex;
        justify-content: normal;
         min-width: 135;
+      
     }
     .categoryContainer{
         height:135px;
@@ -1324,6 +1428,10 @@ body::-webkit-scrollbar{
    }
    .TopDealsMainContainer::-webkit-scrollbar{
       display:"none"
+   }
+   .styleContainer{ 
+    z-index: 999;
+  
    }
   
 }

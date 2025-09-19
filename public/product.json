@@ -3,6 +3,7 @@
         "id":1,
         "img":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e00302d428f5c7be.png?q=100",
          "category":"Minutes"
+         
     },
     {
         "id":2,
@@ -12,17 +13,118 @@
     {
         "id":3,
         "img":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/ff559cb9d803d424.png?q=100",
-        "category":"Fashion"   
+        "category":"Fashion" ,
+        "section1":[
+            "Men's Top Wear",
+            "Men's Bottom wear",
+            "Women Ethnic",
+            "Men Footwear",
+            "Women Footwear",
+            "Watches and Accessories", 
+            "Women Western",
+            "Bags,Suitcases & Luggege",
+            "kids",
+            "Essentials", 
+            "Winter"
+        ] , 
+        "section2":[
+            "More in Men's Top Wear",
+            "All",
+            "Men's T-Shirt",
+            "Men's Casual Shirts",
+            "Men's Formal Shirts",
+            "Men's Kurta's",
+            "Men's Ethinic Sets",
+            "Men's Biazers",
+            "Men's Raincoat",
+            "Men's WindCheaters",
+            "Men's Suit",
+            "Men's Fabrics"
+        ],
+        "section3":[
+            "More in Men's Bottom Wear",
+            "All",
+            "Men's Jeans",
+            "Men's Trousers",
+            "Men's Trackpants",
+            "Men's Shorts",
+            "Men's Cargos",
+            "Mes's Threefourths",
+            "Men's Pyjams & Loungepants",
+            "Men's Dhoti"
+
+        ]
     },
     {
         "id":4,
         "img":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/af646c36d74c4be9.png?q=100",
-        "category":"Electronics"
+        "category":"Electronics",
+        "section1":[
+          "Audio",
+          "Electronics GST Store",
+          "Camera & Accessories",
+          "Computer Peripherals",
+          "Gaming",
+          "Health & Personal Care",
+          "Laptop Accessories",
+          "Laptop and Desktop",
+          "MobileAccessory",
+          "Powerbank",
+          "Smart home automation",
+          "Smart wearable",
+          "Storage",
+          "Tablets"
+        ],
+        "section2":[
+            "More in Audio",
+            "All",
+            "Bluetooth HeadPhone",
+            "Wired HeadPhones",
+            "True Wireless Earbuds",
+            "Bluetooth Speakers",
+            "Soundbars",
+            "Home Theaters",
+            "TV Streaming Device",
+            "Remote Control",
+            "DTH Set top box",
+            "HeadPhones Pouch & Case Covers"
+            
+        ]
     },
     {
         "id":5,
        "img":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/1788f177649e6991.png?q=100",
-       "category":"Home & Furniture"
+       "category":"Home & Furniture",
+       "section1":[
+        "Home Furnishings",
+        "Furniture",
+        "Living Room Furniture",
+        "Kitchen & Dining",
+        "Bedroom Furniture",
+        "Home Decore",
+        "Tools & Utility",
+        "Work Space Furniture",
+        "kids Furniture",
+         "Lightings & Electricals",
+         "Cleaning & Bath",
+         "Pets & Gardening"
+       ],
+       "section2":[
+        "All",
+        "Bed Lines", 
+        "BedSheets",
+        "Blankets",
+         "Curtains & Accessories",
+         "Bath Linen",
+         "Floor Coverings",
+         "Covers & Protectors",
+         "Cushion & Pillows",
+         "Kitchen Linen Sets",
+         "Table Linen Sets",
+         "Sofa & Curtain Fabrics",
+         "Branded Collections"
+       ]
+
     },
     {
         "id":6,
@@ -37,7 +139,48 @@
     {
          "id":8,
         "img":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/b3020c99672953b9.png?q=100",
-        "category":"Beauty, Food.."
+        "category":"Beauty, Food..",
+        "section1":[
+            "Bueaty & Personal Care",
+            "Mens Grooming",
+            "Food & Drinks",
+            "Nutrition & Health Care",
+            "Baby Care",
+            "Toys & School Supplies",
+            "Sport & Fitness",
+            "Books",
+            "Stationary & Office Supplies",
+            "Auto Accessories",
+            "Safety & Hygiene Essentials"
+        ],
+        "section2":[
+            "More in Bueaty & Personal Care",
+            "View All",
+            "Bath & Oral Care",
+            "Personal Hygiene",
+            "Eye Makeup",
+            "Face Makeup",
+            "Lip Makeup",
+            "Hair Care",
+            "Bath Essentials",
+            "Women's Personal Hygiene",
+            "Body & Skin Care",
+            "Top Brand Deails"
+        ],
+        "section3":[
+            "More in Men's Grooming",
+            "View All",
+            "Face Washes",
+            "Bread Olis",
+            "Hair Styling",
+            "Shaving Essentials",
+            "Aftershave",
+            "Face Creams & Face Packs",
+            "Soap & Bodywashes",
+            "Men's Grooming Combos",
+            "Sexual wellness"
+        ]
+
     },
     {
         "id":9,

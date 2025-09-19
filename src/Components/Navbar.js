@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './style.module.css'
 import icon  from './images/icon.svg'
 import login from './images/login.svg'
@@ -16,6 +16,12 @@ import mobile from './images/mobile.svg'
 function Navbar() {
     const [isHoved,setisHoverd]=useState(false) 
     const [isMenu,setisMenu]=useState(false)
+    const [isimage,setisImage]=useState([])
+    useEffect(()=>{
+        fetch("login.json")
+        .then(res=>res.json())
+        .then(data=>setisImage(data))
+    },[])
      
   return ( 
     <div className={styles.container}>
@@ -50,32 +56,50 @@ function Navbar() {
                 <div className={styles.loginPart}>
                       <div className={styles.login} >
                           <a href='#' className={styles.loginAnger}>
-                        <img src={mobile} className={styles.loginImg}/>
+                        <img src={mobile} className={styles.loginImg}/> 
                        </a> 
                     </div> 
                     <div className={styles.login} >
                       <div className={styles.loginAlign} onMouseOver={()=>setisHoverd(true)} onMouseLeave={()=>setisHoverd(false)} style={{backgroundColor:isHoved?"#2a55e5":"white",borderRadius:isHoved?"8px":"none"}} > 
                         <a href="#" className={styles.loginAnger}> 
-                            <img className={styles.loginImg} src={login} />
+                          <img className={styles.loginImg} src={login} style={{filter:isHoved?"brightness(0) invert(1)":"brightness(0)"}}/>
                             <span className={styles.loginTitle} style={{color:isHoved?"white":"#000"}}>Login</span>
-                        </a>
-                        <img className={styles.downArrow} src={downArrow}/>
-                        </div>
-                      </div> 
-                         {/* {  
+                               <img className={styles.downArrow} src={downArrow} style={{filter:isHoved?"brightness(0) invert(1)":"brightness(0)", transform:isHoved?"rotate(180deg)":"rotate(0deg)"}}/>
+                        </a> 
+                        
+                                                      {  
                          isHoved?(
-                            <ul className={styles.loginList}>
+                            <ul className={styles.loginItem}>
+                              
                                 <a href="#" className={styles.newCustom}>
                                   <span className={styles.newCustomer}>New Customer</span>
                                   <span className={styles.sign}>Sign Up</span>
                                 </a>
-                            
+                                {
+                                  
+                                  isimage.map((value,index)=>(
+                                        <a href="#" style={{textDecoration:"none"}} key={index}>
+                                           <li className={styles.loginItemMid}>
+                                               <div className={styles.loginItemDiv}>
+                                         <img className={styles.loginItemImage} src={value.images}></img>
+                                          </div>
+                                       <p className={styles.loginItemprofile}>{value.des}</p>
+                                 </li>
+                                      </a>
+                                  ))
+                              
+                                }
+                                
                             </ul> 
-                         ):(
+                         ):( 
                              <div></div>
                          )  
-                        } */}
+                        }  
+                        </div>
+                      </div> 
+                     
                   </div>  
+                   
                          
                 <div className={styles.login}> 
                    <a href='#' className={styles.loginAnger}>
@@ -128,8 +152,7 @@ function Navbar() {
                                 </div> 
                                 <span>Download App</span>
                             </li>
-                          </a> 
-    s
+                          </a>
                         </ul>
                        ):(
                         <div></div> 

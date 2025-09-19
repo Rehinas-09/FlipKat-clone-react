@@ -8,6 +8,7 @@ import one  from './images/one.svg'
 import Two from './images/Two.svg'
 import  Three from './images/Three.svg'
 import Four from './images/Four.svg'
+import Icons from './images/icons.svg'
 function Footer() {
 
     return (
@@ -128,14 +129,21 @@ function Footer() {
                     </div>
 
                     <div className={styles.footerSecTwo}>
-                       <div> <img src={one}/><a href='#' className={styles.footerIconT}>Become a Seller</a></div>
-                       <div> <img src={Two}/><a href='#' className={styles.footerIconT}>Adertise </a> </div>
-                       <div><img src={Three}/><a href="#" className={styles.footerIconT}>Gift Cards</a> </div>
-                       <div><img src={Four}/><a href='#' className={styles.footerIconT}>Help Center</a></div>
+                       <div className={styles.belowFooter}> <img src={one}/><a href='#' className={styles.footerIconT}>Become a Seller</a></div>
+                       <div className={styles.belowFooter}> <img src={Two}/><a href='#' className={styles.footerIconT}>Adertise </a> </div>
+                       <div className={styles.belowFooter}><img src={Three}/><a href="#" className={styles.footerIconT}>Gift Cards</a> </div>
+                       <div className={styles.belowFooter}><img src={Four}/><a href='#' className={styles.footerIconT}>Help Center</a></div>
+                       <span className={styles.footerDate}>
+                           © 2007-2025 &nbsp;
+                           <span className={styles.footerDateSub}>
+                             FilpKart.com
+                           </span>
+                       </span> 
+                       <img src={Icons}></img>
                     </div>
-                </div>
+                </div>  
             </div>
-        </footer>
+        </footer> 
     )
 }
 
