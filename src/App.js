@@ -16,7 +16,7 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Navbar/>
        <div className="main-section">
         <div className="main-subSection">
@@ -26,24 +26,24 @@ function App() {
            <Bigbillio/> 
             <div className={styles.TopDealsMainContainer}>
           
-           <TopDeals name="Top Deals" products="TopDeals"/>
+        <TopDeals name="Top Deals" products="TopDeals"/>
            <ShopNowImg/>
-           </div> 
+          </div> 
       
           <BigBillonOffer json="Offer"/>
-            <TopProducts name="Top Products for you" Jsonfile="TopProducts"/>
-             <BigBillonOffer json="brand"/>
+          <TopProducts name="Top Products for you" Jsonfile="TopProducts"/>
+              <BigBillonOffer json="brand"/>
              <div className={styles.mainContainerSP}>
             <TopPicks title="Big Billion Days'Top Picks" jsonfile="TopPicks"/>
             <TopSelling/> 
             </div>
             <TopProducts name="Mobiles" Jsonfile="TopMobiles" />
-           <BigBillonOffer json="OfferTwo"/>
+           <BigBillonOffer json="OfferTwo"/> 
            
            </div> 
            </div>  
        </div> 
-       <Footer/>
+        <Footer/>  
     
     </div> 
   );

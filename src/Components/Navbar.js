@@ -17,10 +17,17 @@ function Navbar() {
     const [isHoved,setisHoverd]=useState(false) 
     const [isMenu,setisMenu]=useState(false)
     const [isimage,setisImage]=useState([])
+    const [time,setTime]=useState(true)
     useEffect(()=>{
         fetch("login.json")
         .then(res=>res.json())
         .then(data=>setisImage(data))
+    },[])
+    useEffect(()=>{
+      const timer=setTimeout(()=>{
+        setTime(false)
+      },5000) 
+      return()=>clearTimeout(timer)
     },[])
      
   return ( 
@@ -66,6 +73,21 @@ function Navbar() {
                             <span className={styles.loginTitle} style={{color:isHoved?"white":"#000"}}>Login</span>
                                <img className={styles.downArrow} src={downArrow} style={{filter:isHoved?"brightness(0) invert(1)":"brightness(0)", transform:isHoved?"rotate(180deg)":"rotate(0deg)"}}/>
                         </a> 
+                     {
+                      time&&(
+                          
+                        <div className={styles.openLogin}>
+                          <div className={styles.openLoginIcon}>
+
+                          </div>
+                              <div className={styles.openLoginSub}>
+                                <a href="#" className={styles.openLoginA}> 
+                                  <p>Login</p>
+                                </a> 
+                              </div>
+                        </div> 
+                      )
+                     }
                         
                                                       {  
                          isHoved?(
@@ -118,6 +140,7 @@ function Navbar() {
                         <a href='#' className={styles.tagA}>
                             <img src={menu}></img>
                         </a>
+                        
                     {
                        isMenu?(
                         <ul className={styles.menuItem}>

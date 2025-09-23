@@ -16,18 +16,18 @@ function Footer() {
             <div className={styles.footer}>
                 <div>
                     <div className={styles.footerSecOne}>
-                        <div>
+                        <div className={styles.fcc}>
                             <div className={styles.footerHead}>
                                 About
                             </div>
                             <a href="#" className={styles.footerLink}>Contact Us</a>
                             <a href="#" className={styles.footerLink}>About Us</a>
                             <a href="#" className={styles.footerLink}>Careers</a>
-                            <a href="#" className={styles.footerLink}>FlipKart Stories</a>
+                            <a href="#" className={styles.footerLink}>Flipkart Stories</a>
                             <a href="#" className={styles.footerLink}>Press</a>
-                            <a href="#" className={styles.footerLink}>Coperate Information</a>
+                            <a href="#" className={styles.footerLink}>Corporate Information</a>
                         </div>
-                        <div>
+                        <div className={styles.fcc}>
                             <div className={styles.footerHead}>
                                 Group Companies
                             </div>
@@ -35,7 +35,7 @@ function Footer() {
                             <a href="#" className={styles.footerLink}>Cleartrip</a>
                             <a href="#" className={styles.footerLink}>Shopsy</a>
                         </div>
-                        <div>
+                        <div className={styles.fcc}>
                             <div className={styles.footerHead}>
                                 Help
                             </div>
@@ -45,7 +45,7 @@ function Footer() {
                             <a href="#" className={styles.footerLink}>FAQ</a>
 
                         </div>
-                        <div>
+                        <div className={styles.fc}>
                             <div className={styles.footerHead}>
                                 Consumer policy
                             </div>
@@ -57,8 +57,8 @@ function Footer() {
                             <a href="#" className={styles.footerLink}>Grievance Redressal</a>
                             <a href="#" className={styles.footerLink}>EPR Compliance</a>
                         </div>
-                        <div>
-                            <div className={styles.footerSecondHead}>
+                        <div className={styles.fc}>
+                            <div className={styles.footerSecondHead} >
                                 <div className={styles.footerHeadTwo}>
                                     Mail Us
                                 </div>
@@ -67,13 +67,13 @@ function Footer() {
                                         FlipKart Internet Private Limited,
                                     </p>
                                     <p className={styles.fpara}>
-                                        Building Alyssa, Begonia &
+                                        Buildings Alyssa, Begonia &
                                     </p>
                                     <p className={styles.fpara}>
                                         Clove Embassy Tech Village,
                                     </p>
                                     <p className={styles.fpara}>Outer Ring Road, Devarabeesanahalli village</p>
-                                    <p className={styles.fpara}>Bangaluru,560103,</p>
+                                    <p className={styles.fpara}>Bangaluru, 560103,</p>
                                     <p className={styles.fpara}>Karnataka, India</p>
 
                                 </div>
@@ -103,25 +103,25 @@ function Footer() {
                             </div>
 
                         </div>
-                        <div>
+                        <div className={styles.fc}>
                             <div className={styles.footerHeadTwo}>
                                 Registered Office Address
                             </div>
                                   <div className={styles.footerPara}>
                                     <p className={styles.fpara}>
-                                        FlipKart Internet Private Limited,
+                                        FlipKart Internet Private Limited, 
                                     </p>
                                     <p className={styles.fpara}>
-                                        Building Alyssa, Begonia &
+                                        Buildings Alyssa, Begonia &
                                     </p>
                                     <p className={styles.fpara}>
                                         Clove Embassy Tech Village,
                                     </p>
                                     <p className={styles.fpara}>Outer Ring Road, Devarabeesanahalli village</p>
-                                    <p className={styles.fpara}>Bangaluru,560103,</p>
+                                    <p className={styles.fpara}>Bangaluru, 560103,</p>
                                     <p className={styles.fpara}>Karnataka, India</p>
-                                    <p className={styles.fpara}>CIN:U51109KA2012PTC066107</p>
-                                    <p className={styles.fpara}>Telephone:<span className={styles.footerNumber}>044-45614700</span> / <span className={styles.footerNumber}>044-67415800</span></p>
+                                    <p className={styles.fpara}>CIN : U51109KA2012PTC066107</p>
+                                    <p className={styles.fpara}>Telephone:<span className={styles.footerNumber}> 044-45614700</span> / <span className={styles.footerNumber}>044-67415800</span></p>
                                      
                                 </div>
 
@@ -129,17 +129,17 @@ function Footer() {
                     </div>
 
                     <div className={styles.footerSecTwo}>
-                       <div className={styles.belowFooter}> <img src={one}/><a href='#' className={styles.footerIconT}>Become a Seller</a></div>
-                       <div className={styles.belowFooter}> <img src={Two}/><a href='#' className={styles.footerIconT}>Adertise </a> </div>
-                       <div className={styles.belowFooter}><img src={Three}/><a href="#" className={styles.footerIconT}>Gift Cards</a> </div>
-                       <div className={styles.belowFooter}><img src={Four}/><a href='#' className={styles.footerIconT}>Help Center</a></div>
+                       <div className={styles.belowFooter}> <img src={one} className={styles.ftImage}/><a href='#' className={styles.footerIconT}>Become a Seller</a></div>
+                       <div className={styles.belowFooter}> <img src={Two} className={styles.ftImage}/><a href='#' className={styles.footerIconT}>Adertise </a> </div>
+                       <div className={styles.belowFooter}><img src={Three} className={styles.ftImage}/><a href="#" className={styles.footerIconT}>Gift Cards</a> </div>
+                       <div className={styles.belowFooter}><img src={Four} className={styles.ftImage}/><a href='#' className={styles.footerIconT}>Help Center</a></div>
                        <span className={styles.footerDate}>
                            © 2007-2025 &nbsp;
                            <span className={styles.footerDateSub}>
                              FilpKart.com
                            </span>
                        </span> 
-                       <img src={Icons}></img>
+                       <img src={Icons} className={styles.ftImageTwo}></img>
                     </div>
                 </div>  
             </div>

@@ -3,14 +3,12 @@ import styles from './style.module.css'
 function Category() {
     const [data,setData]=useState([])
     const [isHoveredId,setisHoveredId]=useState(null)
-    const [isSubHoverId,setSubHoverId]=useState(null)
-
     useEffect(()=>{ 
        fetch("./product.json")
        .then(respose=>respose.json()) 
        .then(data=>setData(data)) 
        .catch(error=>console.error("Error to fetch json",error))
-    },[])
+    },[]) 
   return ( 
     <div className={styles.categoryContainer}>
         <div className={styles.categorySub}>
@@ -36,28 +34,32 @@ function Category() {
 
                   </div>
                      {
-                      (isHoveredId===value.id&&(value.section1||value.section2))&&(
+                      (isHoveredId===value.id&&(value.section1||value.section2||value.section3))&&(
                         
                         <div className={styles.styleContainer}> 
-                          <div className={styles.styleContainerSub}>
+                          <div className={styles.styleContainerSub}> 
                             <object className={styles.styleObject}>
-                              { value.section1.map((item,index)=>(
+                              { value.section1.map((item,index)=>( 
                                 
-                                 <a herf="#" className={styles.styleContent} key={index} onMouseOver={()=>setSubHoverId(value.id)} onMouseLeave={()=>setSubHoverId(null)}>
+                                 <a herf="#" className={styles.styleContent} key={index}>
                                   <span className={styles.stylespan}>{item}</span>
                                </a>
                               ))} 
                               
                             </object>
                           </div> 
+                          
                           <div className={styles.styleContainerSubT}>
                             <object className={styles.styleObject}>
-                              { value.section2.map((item,index)=>(
+                              { 
+                            
+                              value.section2.map((item,index)=>(
                                  <a herf="#" className={styles.styleContent} key={index} >
                                   <span className={styles.stylespan}>{item}</span>
                                </a>
-                              ))} 
-                               
+                              
+                              ))
+                            }
                             </object>
 
                           </div>

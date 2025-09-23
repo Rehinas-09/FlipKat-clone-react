@@ -7,6 +7,10 @@
   background-color: rgb(241,242,244);
   flex:1 1 0%;
   overflow-x: hidden;
+  overflow-y: auto;
+} 
+.App::-webkit-scrollbar{
+  display: none;
 }
 .main-section{
   flex: 1;

@@ -506,18 +506,20 @@ body::-webkit-scrollbar{
    border-width: 2px 2px 0 0;
    display: inline-block;
    height: 6px;
-   width: 6px;
+   width: 6px; 
    transform: rotate(45deg);
 }
 .topdeals{
   height: 100%;
   width: 100%; 
+  grid-column: 1/11;
+  
 } 
 .topdealsSub{
     background-color:rgb(255,255,255);
-    margin:0px 0px 16px;
     width:100%;
-    height:100%;
+    height:318px;
+    margin-bottom: 16px;
 }
 .topDealsContainer{
     display: flex;
@@ -545,6 +547,7 @@ body::-webkit-scrollbar{
     padding: 16px;
 }
 .topDealsHead{
+
     color:#1f1f1f;
     display: inline;
     max-width: 100%;
@@ -555,6 +558,7 @@ body::-webkit-scrollbar{
     font-family: "inter-Semibold";
 }
 .topDealContent{
+    border-radius: 0px;
   background:linear-gradient(
     rgb(255,255,255),
       rgb(255,255,255)
@@ -568,6 +572,7 @@ body::-webkit-scrollbar{
     position: relative;
 }
 .topDealContentMid{
+    position: relative;
     display: flex;
     padding-left: 4px;
     padding-right: 4px;
@@ -578,17 +583,21 @@ body::-webkit-scrollbar{
     width:216px;
     display:flex;
     flex-shrink: 0;
-    
+    margin: 8px;
+
 }
 .singleProductSub{
     width: 100%;
     height: 100%;
     padding: 12px 24px;
+    display:flex ;
+    flex-direction: row;
 }
 .singleProductMid{
-    margin: 8px;
+    display: flex;
     flex: 1 1 0%;
     flex-direction: column;
+    position: relative;
 }
 .topProducts{
     display: flex; 
@@ -627,8 +636,9 @@ body::-webkit-scrollbar{
     margin: auto;
     display: block;
     object-fit: contain;
-    aspect-ratio: 1/1;
-    
+    aspect-ratio: 1/1; 
+    width: 152px;
+    height: 152px;
 }
 .contentOffer{
     display: inline;
@@ -644,6 +654,7 @@ body::-webkit-scrollbar{
     cursor:pointer;
     width: 100%;
     margin-left: 12px;
+    grid-column: 11/13;
 }
 .shopNowSub{ 
     height: calc(100%-16px);
@@ -727,14 +738,13 @@ body::-webkit-scrollbar{
     transform: rotate(225deg);
 }
 .TopDealsMainContainer{
-    display: flex;
-    background-color: #ffff;
-    margin-top: 0;
-    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin-top:0; 
+   margin-bottom: 16px;
 
-    
 }
-
+ 
 .ShopNowImg{
     filter: none;
     opacity: 1;
@@ -743,8 +753,9 @@ body::-webkit-scrollbar{
     margin: auto;
     display: block; 
     object-fit: cover; 
-    height: 334px;
-    aspect-ratio: 253.328/334;
+     aspect-ratio: 253.328/334;
+     width: 221.33;
+     height: 334px;
     overflow: clip;
     overflow-clip-margin: content-box;
     
@@ -883,7 +894,7 @@ body::-webkit-scrollbar{
     position: relative;
     padding:12px 14px;
 }
-.topOfferP{
+.topOfferP{  
     display: flex;
     flex:1 1 0%;
     flex-direction:column;
@@ -1146,6 +1157,7 @@ body::-webkit-scrollbar{
     min-width: 978px;
     border: 1px solid #ddd;
     margin-top: 25px;
+    width:100hv;
  }
  .footer{
     width:100%;
@@ -1324,6 +1336,43 @@ body::-webkit-scrollbar{
     display: flex;
     flex-direction: row;
 }
+  .openLogin{
+     position: absolute;
+     top:80%;
+     
+   }
+   .openLoginSub{
+     width:150px;
+     height:50px;
+     background-color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 16px 0 rgba(0,0, 0, .1);
+   }
+   .openLoginA{
+    display: flex;
+    color: #fff;
+    width:150px;
+    height: 50px;
+    background-color: #2a55e5;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-family: "inter-Regular";
+
+}
+.openLoginIcon{
+    width:0; 
+    height:0;
+    border-left: 5px transparent;
+    border-right: 5px transparent;
+    border-bottom: 5px #2a55e5;
+    margin-left: 70px;
+}
 
 @media screen and (max-width:1024px) {  
     .cartTitle{
@@ -1430,30 +1479,37 @@ body::-webkit-scrollbar{
       display:"none"
    }
    .styleContainer{ 
-    z-index: 999;
+    z-index: 999; 
   
    }
+   .footerSecOne{
+     grid-template-columns: repeat(3,1fr);
+     padding-top: 40px;
+     padding-left: 20px;
+     padding-right: 20px;
+     column-gap: 12px;
+   }
+  .footerSecondHead{
+    border: none; 
+    padding-left: 0;
+  }  
+    .fc{
+        margin-top: 20px;
+    }
   
 }
-@media  screen and (max-width:728px) {
-    .TopDealsMainContainer{
-        height:calc(100%-16px) ;
-    }
-    .singleProduct{
-        width: 172px; 
-    }
-    .singleProductSub{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-    }
-    .topDealsArrow{
-        display: none;
-    }
+@media screen and (max-width:768px) {
+ .offerContainerSub{
+    margin-bottom: 0; 
+ }
+ .footerSecOne{
+    grid-template-columns: repeat(3,1fr);
+    
+ }
+    
 }
 @media screen and (max-width:425px) {
-    
+     
     .header{
         padding: 4px 16px;
     }
@@ -1496,22 +1552,89 @@ body::-webkit-scrollbar{
         display: inline-block;
         
     }
-    .sectionB{
+    .toProductHead{
+        color: rgb(31,31,31);
+        font-size: 17px; 
+    }
+    .topOfferProductSub{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .topOfferSingle{
+        width: 100%;
+    }
+    .topOfferSingleMid{
+        width: 100%;
+        padding: 12px 24px;
+        border-bottom:1px solid #e0e0e0
+    }
+    .topOfferP{
+        display: flex;
+        flex:1 1 0%;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+    .topOfferImg{
+        width: 48px;
+        height: 48px;
+    }
+    .topOfferSContent{
+       display: flex;
+       flex: 1 1 0%;
+       flex-direction: column;
+       align-items: flex-start; 
+       margin-left:16px;
+    }
+    .sectionB{ 
       height: 24px;
       display: flex;
       align-items: center;
     }
+    .topOfferContentTwo{
+        
+    }
+    .footerContainer{ 
+        width: 100%;
+    }
     .loginAlign{
         padding: 0;
+    }
+    .footerSecOne{
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 20px;
     }
      .loginAnger{
         display: flex; 
         text-align: center;
         align-items: center;
      } 
+     .footerSecTwo{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+     padding: 0 20px;
+     margin-top: 10px;
+     }
+     .belowFooter{
+        margin: 8px 0;
+     }
+     .ftImage{
+        margin: 8px 0;
+     }
     .login{
         display: inline-block; 
         padding: 0;
+    }
+    .footerDate{
+        margin:8px 0;
+    }
+    .ftImageTwo{
+        margin: 8px 0;
+    }
+    .offerContainerSub{
+        margin-bottom: 0;
     }
     .loginImg{
         margin-left:12px ;
