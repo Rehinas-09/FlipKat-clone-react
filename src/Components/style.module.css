@@ -1373,6 +1373,9 @@ body::-webkit-scrollbar{
     border-bottom: 5px #2a55e5;
     margin-left: 70px;
 }
+.topProductsArrow{
+    display: none;
+}
 
 @media screen and (max-width:1024px) {  
     .cartTitle{
@@ -1431,10 +1434,7 @@ body::-webkit-scrollbar{
    .topDealButtonRight{
     display: none; 
    }
-   .TopDealsMainContainer{
-    height:274px;
-    overflow-x: scroll;
-   }
+ 
    .topDealsAlign{
     padding: 16px 12px;
    }
@@ -1496,6 +1496,52 @@ body::-webkit-scrollbar{
     .fc{
         margin-top: 20px;
     }
+    .topOfferProductMain{
+        overflow-x: auto;
+    }
+    .topProductsArrow{
+        display: none;
+    }
+    .TopDealsMainContainer{
+        margin-bottom: 16px;
+        background-color: rgb(255,255,255);
+        padding-top: 0; 
+    }
+    .topDealContent{
+        overflow-x: scroll;
+    }
+    .topDealsContent::-webkit-scrollbar{
+        display: "none";
+    }
+    .topdealsSub{
+        margin-bottom: 0;
+        height: auto;
+    }
+    .topdeals{
+        grid-column: 1/13;
+    }
+    .topSellingContainer{
+        display: none;
+    }
+    .topPicksContainer{
+        grid-column: 1/13;
+    }
+    .topPicksContentMid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; 
+    }
+    .topPicksImage{
+        width: 191px;
+        height: 191px;
+    }
+    .topPicksS{
+        flex-basis: 25%;
+        max-width: 25%;
+
+    }
+   
+    
   
 }
 @media screen and (max-width:768px) {
@@ -1504,9 +1550,23 @@ body::-webkit-scrollbar{
  }
  .footerSecOne{
     grid-template-columns: repeat(3,1fr);
-    
  }
-    
+ .topOfferProductMain{
+    overflow-x: auto;
+ }
+.topOfferProductMain::-webkit-scrollbar{
+    display:"none"
+ }
+ .topDealsArrow{
+    display: none;
+ }
+ .topProductsArrow{
+    display: none;
+ }
+ .topPicksImage{
+    width:127px ;
+    height: 127px;
+ }
 }
 @media screen and (max-width:425px) {
      
@@ -1570,6 +1630,10 @@ body::-webkit-scrollbar{
         padding: 12px 24px;
         border-bottom:1px solid #e0e0e0
     }
+    .topDealsArrow{
+        margin-right: 8px;
+        display:block;
+    }
     .topOfferP{
         display: flex;
         flex:1 1 0%;
@@ -1592,10 +1656,8 @@ body::-webkit-scrollbar{
       height: 24px;
       display: flex;
       align-items: center;
-    }
-    .topOfferContentTwo{
-        
-    }
+    } 
+   
     .footerContainer{ 
         width: 100%;
     }
@@ -1655,6 +1717,10 @@ body::-webkit-scrollbar{
         margin-bottom: 4px;
         
     } 
+    .topProductsArrow{
+        display: block;
+        margin-right: 8px;
+    }
     
     .catName{
         font-family: 'inter-Regular';
@@ -1722,7 +1788,7 @@ body::-webkit-scrollbar{
         align-items: start;
     }
     .contentOffer{
-        text-align: left;
+         text-align: left;
     }
     .topContentOne{
          font-size: 14px;
@@ -1737,5 +1803,28 @@ body::-webkit-scrollbar{
         letter-spacing: -0.01px;
         line-height: 20px;
         color: rgb(112,112,112);
-    }     
+    }  
+    .topPicksS{
+        flex-basis: 50%;
+      max-width: 50%;
+        
+    } 
+    .topPicksContentMid{
+        flex-wrap: wrap;
+    }
+    .topDealsMainContainer{
+        height: auto;
+        overflow-x: hidden;
+        display:"block"
+    }
+    .topDeals{
+        height: 100%;
+        width: 100%;;
+
+    }
+    .topDealContent{
+        overflow-x: hidden;
+    } 
+    
+  
 }

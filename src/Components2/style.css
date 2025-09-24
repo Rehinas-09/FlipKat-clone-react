@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "inter-Bold";
+    src: url('../Assets/fonts/Inter-Bold\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "inter-Regular";
+    src: url('../Assets/fonts/Inter-Regular\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "inter-SemiBold";
+    src: url('../Assets/fonts/Inter-SemiBold\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "roboto-medium";
+    src: url('../Assets/fonts/roboto-medium\ \(1\).woff2') format('woff2');
+}
+@font-face {
+    font-family: "roboto-regular";
+    src: url('../Assets/fonts/roboto-regular\ \(1\).woff2') format('woff2');
+}
+
+
+.nav-container{
+    padding-bottom: 56px;
+    min-width: 978px;
+    position: relative;
+}
+.nav-containerSub{
+    position: relative;
+    display:flex;
+    width: 100%;
+    height: 56px;
+    background-color: #2874f0;
+    color: #f0f0f0;
+    flex-direction: row;
+    z-index:999;
+}
+.nav-left{
+    height: 100%;
+    min-width: 124px;
+
+}
+.nav-right{
+    height: 100%;
+    min-width: 124px;
+}
+.navSection{
+    display: flex;
+    max-width: 1248px;
+    width: 100%;
+    height: 100%;
+}
+.nav-icon{
+    display: flex;
+    justify-content: flex-end;
+    min-width:137px;
+    align-items: center;
+}
+.nav-icons{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+}
+.nav-iconsA{
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-iconsB{
+    text-decoration: none;
+    margin-top: -1px;
+    color:#f0f0f0;
+    border:none;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 11px;
+    
+}
+.iconImg{
+    width: 75px;
+}
+.explore{
+    font-size: 11px;
+    font-style: italic;
+    margin-top: -1px;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-family: "inter-Regular";
+}
+.plus{
+  color: #ffe500;
+  font-weight: 500;
+  margin-right: 2px; 
+  font-size: 11px;  
+}
+.explorePlus{
+    width:10px;
+}
+.inputSection{
+    display: flex;
+    height: 100%;
+    min-width: 304px;
+    width:calc(100% - 540px);
+    margin:0 0 0 12px;
+    align-items: center;
+}
+.form{
+    display: inline-block;
+    box-shadow: 0 2px 4px 0 rgb(0,0,0,.23);
+    width: 100%;
+    height: 36px;
+    max-width:546px;
+    position: relative;
+    border: none;
+    outline: none;
+}
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 100%;
+
+}
+.formContainerSub{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.input{
+    padding: 0 16px;
+    border-radius: 2px 0 0 2px;
+    font-size: 14px;
+    height: 36px;
+    width: 100%;
+    border: none;
+}
+.formButton{
+    border: 1px solid #fff;
+    border-color: #fff;
+    height: 36px;
+    width: 44px;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 4px 12px 0 8px;
+}
+.loginSection{
+    display: flex;
+    align-items: center;
+    min-width: 112px;
+    flex:0 0 auto;
+    margin:0 20px;
+    max-width: 150px;
+}
+.loginSectionMid{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: #fff;
+}
+.loginSectionSub{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.loginInputSection{
+    color: #2847f0;
+    font-weight: 500;
+    background-color: #fff;
+    cursor:pointer;
+    border-radius: 2px;
+    padding: 5px 40px;
+    border:1px solid #dbdbdb;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .1px;
+    font-family: "inter-Regular",
+}  
+.seller{
+     display: flex;
+     align-items: center;
+     flex: 0 0 auto;
+     margin:0 20px;
+     
+}
+.sellerA{
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: rgb(240,240,240);
+    position: relative;
+    text-decoration: none;
+
+}
+.sellerSpan{
+    font-family: "inter-Regular";
+    font-size: 16px;
+}
+.more{
+    display: flex;
+    flex:0 0 auto;
+    margin:0 20px;
+    max-width: 150px; 
+    display: flex;
+
+}
+.moreSub{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    height: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: .1px;
+    font-weight: 500;
+    color: #fff;
+    font-family: "inter-Regular";
+
+}

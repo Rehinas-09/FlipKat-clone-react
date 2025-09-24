@@ -74,7 +74,7 @@ function TopDeals(props) {
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <svg className={styles.topDealsArrow} width="16" height="16" fill="none" viewBox="0 0 17 17" style={{ marginRight: "8px" }}><path d="m6.627 3.749 5 5-5 5" stroke="#111112" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                                        <svg  className={styles.topDealsArrow} width="16" height="16" fill="none" viewBox="0 0 17 17" ><path d="m6.627 3.749 5 5-5 5" stroke="#111112" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                                     </div>
 
                                                 </div>
