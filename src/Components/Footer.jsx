@@ -4,12 +4,12 @@ import fimage from './images/facebook.svg'
 import timage from './images/twitter.svg'
 import iimage from './images/instagram.svg'
 import yimage from './images/youtube.svg'
-import one  from './images/one.svg'
+import one  from './images/g.svg'
 import Two from './images/Two.svg'
 import  Three from './images/Three.svg'
-import Four from './images/Four.svg'
+import Four from './images/sg.svg'
 import Icons from './images/icons.svg'
-function Footer() {
+function Footer() {  
 
     return (
         <footer className={styles.footerContainer}>
@@ -26,7 +26,7 @@ function Footer() {
                             <a href="#" className={styles.footerLink}>Flipkart Stories</a>
                             <a href="#" className={styles.footerLink}>Press</a>
                             <a href="#" className={styles.footerLink}>Corporate Information</a>
-                        </div>
+                        </div> 
                         <div className={styles.fcc}>
                             <div className={styles.footerHead}>
                                 Group Companies

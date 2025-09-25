@@ -1,21 +1,46 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './style.module.css'
 function Category() {
     const [data,setData]=useState([])
     const [isHoveredId,setisHoveredId]=useState(null)
+    const [width,setWidth]=useState(window.innerWidth)
+    const navigate=useNavigate();
     useEffect(()=>{ 
        fetch("./product.json")
        .then(respose=>respose.json()) 
        .then(data=>setData(data)) 
        .catch(error=>console.error("Error to fetch json",error))
     },[]) 
+    useEffect(()=>{
+      const handleWidth=()=>{
+        setWidth(window.innerWidth)
+      }
+      handleWidth()
+      window.addEventListener("resize",handleWidth)
+      return()=>window.removeEventListener("resize",handleWidth)
+
+    },[])
+    const goToProduct=()=>{
+       navigate("/product") 
+    }
   return ( 
     <div className={styles.categoryContainer}>
         <div className={styles.categorySub}>
           <div className={styles.catAlign}>
             {
-              data.map((value)=>(
-                <a className={styles.catAnger} key={value.id} onMouseOver={()=>setisHoveredId(value.id)} onMouseLeave={()=>setisHoveredId(null)}>
+              data.map((value)=>( 
+                <a className={styles.catAnger} 
+                key={value.id}
+
+                onMouseOver={()=>{ 
+                  if(width>1024){setisHoveredId(value.id)}}}
+                 onMouseLeave={()=>{ if(width>1024){setisHoveredId(null)}}} 
+                 onClick={()=>{
+                  if(value.id===6){ 
+                    goToProduct(); 
+                  }
+                 }}>
                   <div className={styles.catElement} >
                      <div className={styles.catImg}> 
                        <img className={styles.catImage} src={value.img} style={{width:"64px",height:"64px"}}/>
@@ -29,7 +54,7 @@ function Category() {
                         <span className={styles.categoryArrow}></span>
                       )
                      }   
-                     
+                    
                      </span>
 
                   </div>

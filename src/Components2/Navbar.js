@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
+import notification from './images/notification.svg'
+import help from './images/help.svg'
+import advertise from './images/advertise.svg'
+import download from './images/download.svg'
 function Navbar() {
+  const [ismenu,setisMenu]=useState(false)
   return (
     <div>
        <div className="nav-container">
@@ -45,14 +50,58 @@ function Navbar() {
                   <span className='sellerSpan'>Become a Seller</span>
                 </a>
                </div>
-               <div className='more'> 
+               <div className='more' onMouseOver={()=>setisMenu(true)} onMouseLeave={()=>setisMenu(false)}> 
                 <div className='moreSub'>
                   <div className='moreName'>
                     <div>More</div>
                   </div>
                   <svg className='moreSvg' width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="Wto0b0" style={{ transform:"rotate(270deg)",
                    margin: "1px 0 0 8px"}}><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="-dC5Le"></path></svg>
-                </div>
+                
+                 {
+                  ismenu?(
+                    <div className='bar2menu'>
+                      <div className='bar2menuSub'></div>
+                    <ul className="menuItem">
+                                              <a href='#' className="menuItemList">
+                                                <li className="list">
+                                                   <div className="icon">
+                                                    <img  src={notification}  className="menuImg"/>
+                                                    </div> 
+                                                    <span>Notification Preferences</span>
+                                                </li>
+                                              </a> 
+                                              <a href='#' className="menuItemList">
+                                                <li className="list">
+                                                   <div className="icon">
+                                                    <img  src={help}  className="menuImg"/>
+                                                    </div> 
+                                                    <span>24x7 Customer care</span>
+                                                </li>
+                                              </a> 
+                                              <a href='#' className="menuItemList">
+                                                <li className="list">
+                                                   <div className="icon">
+                                                    <img  src={advertise}  className="menuImg"/>
+                                                    </div> 
+                                                    <span>Advertise</span>
+                                                </li>
+                                              </a> 
+                                              <a href='#' className="menuItemList">
+                                                <li className="list">
+                                                   <div className="icon">
+                                                    <img  src={download}  className="menuImg"/>
+                                                    </div> 
+                                                    <span>Download App</span>
+                                                </li>
+                                              </a>
+                                            </ul>
+                              </div>
+                  ):(
+                         <div></div>
+                  )
+                 }
+                 </div>
                </div>
                 <div className='more'> 
                 <div className='moreSub'>

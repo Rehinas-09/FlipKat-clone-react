@@ -21,7 +21,7 @@
 
 
 .nav-container{
-    padding-bottom: 56px;
+
     min-width: 978px;
     position: relative;
 }
@@ -49,8 +49,9 @@
     max-width: 1248px;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
 }
-.nav-icon{
+.nav-icon{ 
     display: flex;
     justify-content: flex-end;
     min-width:137px;
@@ -98,22 +99,24 @@
     width:10px;
 }
 .inputSection{
-    display: flex;
-    height: 100%;
-    min-width: 304px;
-    width:calc(100% - 540px);
-    margin:0 0 0 12px;
-    align-items: center;
+   display: flex;
+   justify-content: flex-start;
+   height: 100%;
+   min-width: 304px;
+   width:calc(100% - 540px);
+   margin: 0 auto 0 12px;
+   align-items: center;
+
+   
 }
 .form{
     display: inline-block;
     box-shadow: 0 2px 4px 0 rgb(0,0,0,.23);
     width: 100%;
     height: 36px;
-    max-width:546px;
+    max-width:546px; 
     position: relative;
-    border: none;
-    outline: none;
+ 
 }
 .formContainer{
     display: flex;
@@ -131,6 +134,7 @@
 .input{
     padding: 0 16px;
     border-radius: 2px 0 0 2px;
+    outline: none;
     font-size: 14px;
     height: 36px;
     width: 100%;
@@ -138,7 +142,7 @@
 }
 .formButton{
     border: 1px solid #fff;
-    border-color: #fff;
+    background-color: #fff;
     height: 36px;
     width: 44px;
     border-radius: 2px;
@@ -225,4 +229,263 @@
     color: #fff;
     font-family: "inter-Regular";
 
+}
+.navSection2{
+    position: relative;
+    min-height: 40px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0, .1);
+    
+}
+.navSection2-Sub{
+    max-width: 978px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    margin: auto;
+    position: relative;
+}
+.bar2span{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+    font-family:"inter-Semibold";
+}
+.bar2svg{ 
+    margin-left: 8px;
+    transform: rotate(270deg);
+} 
+.menuItem{
+    width: 240px;
+    right: 19%;
+    display: "block";
+    position: absolute;
+    top:100%;
+    list-style: none;   
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    min-width: 100px;
+    box-shadow: 0 4px 16px 0 rgba(0,0, 0, .1);
+    z-index:100;
+    border-radius: 3px;
+} 
+.menuItemList{
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.list{
+    border-bottom: none;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    white-space:nowrap; 
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.menuImg{
+    width: 18px;
+    height: 18px;
+}
+.bar2menuSub{
+    left:50%;
+    transform: translateX(-10px);
+    border-bottom: 100%;
+    border-bottom-color: #f0f0f0;
+    border-width: 10px;
+    position: absolute;
+} 
+.bar2menuSub::after{
+    content: "";
+    border-bottom-color: #fff;
+    border-width: 8px;
+    transform: translateX(-8px);
+    bottom: -10px;
+}
+.ProductData{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+.productHead{
+    background-color: rgb(255,255,255);
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-grow: 1;
+}
+.productHeadSub{
+    background: #fff;
+    padding: 12px 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    height: 100%;
+    min-height: 72px;
+}
+.productHeadSection1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.productSubHead1{
+    font-size: 12px;
+    color: #878787;
+    display: flex;
+    font-family: "inter-Regular";
+}
+.ProductSubHeadSvg{
+    transform: rotate(180deg);
+}
+.productSubHead2{
+    font-size: 12px;
+    color: #878787;
+    display: inline-block;
+    font-family: "inter-Regular";
+}
+.productSubHead3{
+    font-size: 12px;
+    color: #878787;
+    display: inline-block;
+    font-family: "inter-Regular";
+}
+.productHeadSection2{
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+    display: inline-block;
+    font-family: "inter-Semibold";
+    color: #212121;
+    line-height: 1.4;
+}
+.productHeadSection3{
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 10px;
+    color: #878787;
+    line-height: 1.4;
+    font-family: "inter-Regular";
+}
+.productSection4Sub{
+    border: 2px solid transparent;
+    font-weight: 500;
+    padding: 8px 10px 4px 0;
+    font-family: "inter-Semibold";
+    font-size: 14px;
+}
+.productSection4Sub2{
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0 4px;
+    display: inline-block;
+    margin: 0 10px;
+    font-family: "inter-Regular";
+}
+.productHeadSection4{
+    display: flex;
+}
+.productDataContainer{
+    width:100%;
+    display:flex;
+    background-color: #fff;
+    background: #fff;
+    align-items: stretch;
+}
+.productDataContainerSub{
+    line-height: 1;
+    padding: 24px 0 30px 24px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+.productDataContainerA{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+}
+.productDataImage{
+    position: relative;
+    width:200px; 
+}
+.productDataImg{
+    position: relative;
+    margin:0 auto;
+    height: 200px;
+    width:200px;
+}
+.pdImage{
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+.productDataAdd{
+    margin-top: 16px;
+    display:block;
+}
+.pdspan{
+    display:inline-block;
+
+}
+.pdspanl{
+    opacity: .5;
+    cursor: pointer;
+    position: relative;
+}
+.pdspani{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.pdspand{
+    position: relative;
+    width:14px;
+    height: 14px;
+    background-color: transparent;
+    border:1.4px solid #c2c2c2;
+    border-radius: 1.5px;
+    cursor: pointer;
+    
+}
+.pdlabel{
+    margin-left: 8px;
+    font-size: 14px;
+    color: #212121;
+    cursor:pointer;
+}
+.pdlabels{
+    font-size: 14px;
+    font-family: "inter-Regular";
+}
+.productDataLove{
+    position:absolute;
+    display: inline-block;
+    right:-8px;
+    top:2px;
+    cursor:pointer
+}
+.pdl{
+    position: relative;
+    display: inline-flex;
 }
