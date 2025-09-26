@@ -426,10 +426,13 @@
     width:200px; 
 }
 .productDataImg{
-    position: relative;
-    margin:0 auto;
-    height: 200px;
-    width:200px;
+   height: 200px;
+   width: 200px;
+   position: relative;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .pdImage{
     position: relative;
@@ -489,3 +492,430 @@
     position: relative;
     display: inline-flex;
 }
+.productDataContent{
+    padding-left: 25px;
+    width: clac(100% - 200px);
+    display:flex;
+    flex-direction: row;
+
+}
+.productDataContentOne{
+  width:58.33%;
+  display: inline-block;
+}
+.ProductDCOne{
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "inter-Semibold";
+}
+.ProductDcTwo{
+    margin-top: 6px;
+    cursor: pointer;
+    
+}
+.ProductDcTwoSpan1{
+   position: relative;
+}
+.ProductDcTwoSpan2{
+   padding-left: 8px;
+   font-weight: 500;
+   color: #878787;
+   font-family: "inter-Semibold";
+}
+.ProductDcTwodiv{
+    display: inline-block;
+    color: #fff;
+    padding: 2px 4px 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #388e3C;
+}
+.rating-star{
+    margin: 2px 0 0 2px;
+    height: 10px;
+}
+.ProductDcTwosapn3{
+    margin-top: 13px;
+}
+.ProductDcTwoUl{
+    margin-top: 5px;
+    color: #212121;
+    line-height: 22px;
+    display: table;
+}
+.ProductDcList{
+   display: table-row;
+   font-size: 14px;
+   font-weight: 400;
+   font-family: "inter_Regular";
+}
+.ProductDcList::before{
+  content: ".";
+  color: rgba(192,194,194);
+  padding-right: 8px;
+  display: table-cell; 
+} 
+.productDataContantTwo{
+    padding-left: 25px;
+    width:41.66%;
+    display: inline-block;
+}
+.PDCTsub1{
+    display:inline-block;
+    margin-top: -1px;
+    padding-right: 10px;
+}
+.PDCTsub2{
+    display: inline-block;
+    padding-bottom: 4px;
+}
+.PDCTsub3{
+    margin-top: 5px;
+}
+.PDCTsub4{
+    margin-top: 5px;
+    display: inline-block;
+}
+.PDCTprice{
+    font-size: 25px;
+    display: block;
+    font-weight: 500;
+    color: #212121;
+    cursor: pointer;
+    font-family: 'inter-Semibold';
+}
+.PDCTactual{
+    padding-bottom: 10px;
+    display: inline-block;
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #878787;
+    font-family: "inter-Regular";
+}
+.PDCToff{
+    display: inline-block;
+    margin-left: 8px;
+    color: #388e3c;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -.2px;
+
+}
+.PDCTsub3sub{
+    padding: 4px;
+    border-radius: 2px;
+    background-color: rgb(244,242,255);
+    display: inline-block;
+}
+.PDCTsub3sub1{
+    color: rgb(82,9,219);
+    font-size: 12px;
+    font-style: normal;
+    display: inline-flex;
+    font-family: "inter-Semibold";
+} 
+.PDCTupto{
+  color: rgb(0,0,0);
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex;
+  font-family: "inter-Regular";
+}
+.PDCToffon{
+    color: rgb(0,0,0);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    display: inline-flex;
+}
+.PDCTexchange{
+ color: rgb(0,0,0);
+ font-size: 14px;
+ font-weight: 400;
+ display: inline-flex;
+}
+.PDCTsub5{
+    margin-top: 5px;
+    display: inline-block;
+}
+.PDCTsub5sub{
+    color: rgb(199,0,85);
+    font-size: 12px;
+    font-weight: 700;
+    display:inline-flex;
+}
+.filterContainer{
+    display: flex;
+    flex:0 0 280px;
+    max-width: 280px;
+    padding: 0px 10px 0px 0px;
+    width:16.66%;
+}
+.productMainContainer{
+    margin: 0 auto;
+    min-width: 987px;
+    max-width:1680px;
+    padding: 8px;
+    width: 100%;
+    position: relative;
+}
+.productSubContainer{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+.filterContainerSub{
+   display: flex;
+   flex-direction: column;
+   width:100%;
+}
+.filterContainerMid{
+    width:100%;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,.06);
+}
+.filterSection1{
+    
+    padding: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.filterSection1Sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filterHead{
+    font-size: 18px;
+    text-transform: capitalize;
+    width:67%;
+    font-weight: 500;
+    letter-spacing: .3px;
+    display: inline-block;
+    font-family: "inter-Semibold";
+}
+.filterCategories{
+    font-size: 14;
+}
+.filterCategorySection{
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.filterCategoryName{
+    font-size: 12PX;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#212121;
+    margin-bottom: 5PX;
+    font-family: "inter-Semibold";
+
+}
+.filterCatLoc{
+    padding: 5px 0;
+    color: #212121;
+    white-space: nowrap;
+}
+.filterCatSvg{
+    display:inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.filterCatA{
+    color: #878787;
+    width:150px;
+    display: inline-block;
+    font-family: "inter-Regular";
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 5px;
+    line-height: 1.4;
+}
+.filterTele{
+    padding: 5px 0;
+    color: #212121;
+    white-space: nowrap;
+}
+.filterTeleA{
+    font-weight: 500;
+    white-space:nowrap ;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "inter-Semibold";
+    font-size: 14px;
+}
+.filterPrice{
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.filterPriceOne{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filterPriceName{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    display: inline-block;
+    font-family: "inter-Semibold";
+}
+.filterPriceTwo{
+    height:25px;
+
+}
+.filterPriceTwoSub{
+    height: 100%;
+    position: relative;
+    bottom: -6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #212121;
+    line-height: 1.4;
+}
+.pricebox{
+    height:25px;
+    width:39.468px;
+    background: #e0e0e0;
+    display: inline-block;
+}
+.priceLine{
+    position: relative;
+    height: 13px;
+    cursor: pointer;
+}
+.pricedots{
+    margin-top: -12px;
+}
+.leftRound{
+
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    left:-13.5px;
+    width: 20px;
+    height: 20px;
+    top:-3.5px;
+    transition: translate .5s ease-out;
+    z-index: 99;
+}
+.lRound{
+    right:0;
+    width:13px;
+    height:13px;
+    border-radius: 50%;
+    border:1px solid #bababa;
+    position: absolute;
+    background-color: #fff;
+    top:3.5px;
+}
+.rightRound{
+   transform: translate(-1.19px);
+   right:-13.5px;
+   display: inline-block;
+   position: absolute;
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   top: -3.5px;
+   transition: translate .5s ease-out;
+   z-index:99
+}
+.rRound{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border:1px solid #bababa;
+    position:absolute;
+    background-color: #fff;
+    top:3.5px;
+}
+.filterLineOne{
+    background-color: #c2c2c2;
+    height:2px;
+    display: inline-block;
+    position: absolute;
+    top:6px;
+    width: 100%;
+}
+.filterLineTwo{
+    transform: translate(0px) scaleX(0.995);
+    background-color: #2874f0;
+    transform: left center;
+    top:4px;
+    height: 6px;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}
+.pricedots{
+    margin-top: -12px;
+}
+.priceDot{
+    width:39.4683px;
+    display: inline-block;
+    text-align: left;
+    color: #c2c2c2;
+}
+.priceDot:nth-child(7){
+    width:0;
+}
+.filterPriceFour{
+    color: #3a3a3a;
+    font-size: 14px;
+    margin:5px -4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+.priceMenuOne{
+    display:inline-block;
+    display: flex;
+    flex-grow: 2;
+    
+}
+.selecetMinPrice{
+    width:100%;
+    border:1px solid #e0e0e0;
+    border-radius: 1px;
+    appearance: none;
+    background: #fff url('./images/d.svg') no-repeat 90% 50%;
+    height:24px;
+    font-size: 14px;
+    color: #212121;
+    line-height: 1;
+    padding: 0 5px ;
+    outline: none;
+}
+.priceMid{
+    display: inline-block;
+    margin: 0 9px;
+    font-size: 14px;
+    color: #878787;
+    line-height: 1;
+    flex: 1;
+    text-align: center;
+    font-family: 'inter-Regular';
+}
+.priceMenuTwo{
+    display:inline-block;
+    margin-left:1.5px;
+    flex-grow: 2;
+}
+.selectMaxPrice{
+    width:100%;
+    border:1px solid #e0e0e0;
+    border-radius: 1px;
+    appearance: none;
+    background: #fff url('./images/d.svg') no-repeat 90% 50%;
+    height: 24px;
+    font-size: 14px;
+    color: #212121;
+    line-height: 1;
+    padding: 0 5px;
+    outline: none;
+} 
