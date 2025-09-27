@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 
-function ProductData() {
-    const [data,setData]=useState([])
-    useEffect(()=>{
-       fetch("TvData.json")
-       .then(response=>response.json())
-       .then(data=>setData(data))
-    },[])
+function ProductData({products}) {
+   
   return (
     <>
     {
-        data.map((value,index)=>(
+        products.map((value,index)=>(
             <div className="productDataContainer" key={index}>
                 <div className='productDataContainerSub'>
                   <a className='productDataContainerA'>
@@ -112,7 +107,7 @@ function ProductData() {
                                      {value.Exchange}
                                   </div>
                                   <div className="PDCTexchange"> Off on Exchanage</div>
-                              </div>
+                              </div> 
                       </div>
                     </div>
  

@@ -919,3 +919,110 @@
     padding: 0 5px;
     outline: none;
 } 
+.assured-section{
+    display: flex;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.labelAssured{
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+
+}
+.Assuredfil{
+    font-size: 14px;
+    padding-left: 11px;
+    color: #212121;
+    display: inline-block;
+    width: calc(100% 14px - 11px);
+}
+.Qmark{
+    display:"inline-block";
+    position:"relative"
+}
+.QmarkSpan{
+ width: 16px;
+ height: 16px;
+ background-color: #fff;
+ border:1px solid #e0e0e0;
+ display: inline-block;
+ text-align: center;
+ font-size: 11px;
+ font-weight: 500;
+ color: #878787;
+ border-radius: 50px;
+ line-height: 16px;
+ cursor: pointer;
+}
+.brand-section{
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.brandSone{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+
+}
+.brandName{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    display: inline-block;
+    font-family: 'inter-Semibold';
+}
+.svgBrand{
+  transform: rotate(90deg);
+}
+.brandStwoSUb{
+    margin: 7px 0;
+}
+.searchBrand{
+    margin-bottom: 7px;
+    display: flex;
+}
+.SB{
+width: 100%;
+border-width: 0 0 2px;
+border-color: #e0e0e0;
+height: 20px;
+font-size: 14px;
+padding: 0 0 0 21px;
+color: #878787;
+outline: none;
+font-family: "inter-Regular";
+}
+.searchIcon{
+    width:12px;
+    height: 20px;
+    position: absolute;
+
+}
+.brandCheck{
+  padding: 3px 0;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+}
+.brandCheckSub{
+ padding: 3px 0;
+ position: relative;
+}
+.brandNames{
+  font-size: 14px;
+  padding-left: 11px;
+  color: #212121;
+  display:inline-block;
+  width: calc(100% - 14px - 11px);
+  white-space: nowrap;
+  line-height: 1;
+  cursor: pointer; 
+  font-family:"inter-Regular";
+}
+.screensize{
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;   
+}

@@ -3,6 +3,7 @@ import './App.css';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 import Parent from './Parent';
 import Parent2 from './Parent2';
+import PriceSlider from './Components2/PriceSildeD';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='/product' element={<Parent2/>}/>
         </Routes>
        </Router>
+    
        
         {/* <Navbar/> 
         <Navbar2/>
