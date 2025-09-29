@@ -13,10 +13,14 @@
         "total_Price":"39,999",
         "Offer":"70% Off",
         "discount":"Top Discount of the Sale",
-        "Exchange":"₹2,000",
-        "brand":"Thomson",
+        "Exchange":"₹2,000", 
+        "brand":"InnoQ", 
         "inch":43,
-        "assured":true
+        "assured":false,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
 
     },
     {
@@ -37,7 +41,11 @@
         "Exchange":"₹2,000",
         "brand":"Samtonic" ,
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"3★ & above"
 
     },
     {
@@ -58,7 +66,11 @@
         "Exchange":"₹2,750" , 
         "brand":"Samsung",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Tizen",
+        "ratingSection":"4★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/u/v/k/-original-imaheeg2cbrz87es.jpeg?q=70",
@@ -78,7 +90,11 @@
         "Exchange":"₹2,000",
         "brand":"Thomson",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Linux",
+        "ratingSection":"4★ & above"
     
     },
     {
@@ -100,7 +116,11 @@
         "bank_offer":"Bank Offer",
         "brand":"Foxsky",
         "inch":32,
-        "assured":true
+        "assured":true,
+        "resolution":"HD Ready",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
         
     },
     {
@@ -122,7 +142,11 @@
         "Exchange":"₹2,000",
         "brand":"Foxsky",
         "inch":40,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"3★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/8/q/d/-original-imah6c7ajdug9gz4.jpeg?q=70",
@@ -143,7 +167,11 @@
         "Exchange":"₹2,000",
         "brand":"Acer",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"3★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/j/y/k/-original-imahbgz4ejypz276.jpeg?q=70",
@@ -164,7 +192,11 @@
         "Exchange":"₹2,000",
         "brand":"Thomson",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/e/m/d/-original-imahfrcmufdgtkun.jpeg?q=70",
@@ -185,7 +217,12 @@
         "Exchange":"₹2,000",
         "brand":"InnoQ",
         "inch":40,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
+
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/w/a/q/-original-imah3yh6bmjtghny.jpeg?q=70",
@@ -206,7 +243,11 @@
         "Exchange":"₹3,000",
         "brand":"Smasung",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Tizen",
+        "ratingSection":"4★ & above"
     },
     {  
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/f/c/i/-original-imahexc2x46aaf4d.jpeg?q=70",
@@ -228,7 +269,11 @@
         "Exchange":"₹3,000",
         "brand":"acerpure",
         "inch":32,
-        "assured":true
+        "assured":true,
+        "resolution":"HD Ready",
+        "display":"LED",
+        "os":"Google Tv",
+        "ratingSection":"4★ & above"
 
     },
     {
@@ -250,7 +295,11 @@
         "Exchange":"₹2,000",
         "brand":"Coocaa",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"QLED",
+        "os":"Google Tv",
+        "ratingSection":"4★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/m/5/v/-original-imahg2h8zhm94yny.jpeg?q=70",
@@ -271,7 +320,11 @@
         "Exchange":"₹2,000",
         "brand":"Foxsky",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/k/c/t/-original-imahdh9gsqyzwdz4.jpeg?q=70",
@@ -292,7 +345,11 @@
         "Exchange":"₹2,000",
         "brand":"TOSHIBA",
         "inch":43,
-        "assured":true
+        "assured":true,
+        "resolution":"Full HD",
+        "display":"LED",
+        "os":"Android",
+        "ratingSection":"4★ & above"
         
     }
 ]

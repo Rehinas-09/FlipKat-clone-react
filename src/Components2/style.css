@@ -1026,3 +1026,24 @@ font-family: "inter-Regular";
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;   
 }
+.screen_size{
+    padding: 3px 0;
+}
+.screen_sizeSub{
+    width: 1100%;
+    display: "inline-block";
+}
+.screen_sizeLabel{
+    padding: 3px 0;
+    cursor: pointer;
+    position: relative;
+}
+.screenSizeRange{
+    font-size: 14px;
+    padding-left: 11px;
+    color: #212121;
+    display: inline-block;
+    width:calc(100% - 14px - 11px);
+    cursor: pointer;
+    font-family: "inter-Regular";
+}
