@@ -15,12 +15,14 @@
         "discount":"Top Discount of the Sale",
         "Exchange":"₹2,000", 
         "brand":"InnoQ", 
-        "inch":43,
+        "inch":43, 
         "assured":false,
         "resolution":"Full HD",
-        "display":"LED",
+        "display":"LED", 
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":70
 
     },
     {
@@ -45,7 +47,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"3★ & above"
+        "ratingSection":"3★ & above",
+        "invoice":"available",
+        "dis":49
 
     },
     {
@@ -70,7 +74,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Tizen",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"not available",
+        "dis":41
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/u/v/k/-original-imaheeg2cbrz87es.jpeg?q=70",
@@ -94,7 +100,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Linux",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":43
     
     },
     {
@@ -120,7 +128,9 @@
         "resolution":"HD Ready",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":68
         
     },
     {
@@ -146,7 +156,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"3★ & above"
+        "ratingSection":"3★ & above",
+        "invoice":"not available",
+        "dis":70
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/8/q/d/-original-imah6c7ajdug9gz4.jpeg?q=70",
@@ -171,7 +183,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"3★ & above"
+        "ratingSection":"3★ & above",
+        "invoice":"available",
+        "dis":62
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/j/y/k/-original-imahbgz4ejypz276.jpeg?q=70",
@@ -196,7 +210,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":50
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/e/m/d/-original-imahfrcmufdgtkun.jpeg?q=70",
@@ -221,7 +237,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"not available",
+        "dis":68
 
     },
     {
@@ -247,7 +265,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Tizen",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":46
     },
     {  
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/f/c/i/-original-imahexc2x46aaf4d.jpeg?q=70",
@@ -273,7 +293,9 @@
         "resolution":"HD Ready",
         "display":"LED",
         "os":"Google Tv",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":60
 
     },
     {
@@ -299,7 +321,9 @@
         "resolution":"Full HD",
         "display":"QLED",
         "os":"Google Tv",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":47
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/m/5/v/-original-imahg2h8zhm94yny.jpeg?q=70",
@@ -324,7 +348,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":72
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/k/c/t/-original-imahdh9gsqyzwdz4.jpeg?q=70",
@@ -349,7 +375,9 @@
         "resolution":"Full HD",
         "display":"LED",
         "os":"Android",
-        "ratingSection":"4★ & above"
+        "ratingSection":"4★ & above",
+        "invoice":"available",
+        "dis":72
         
     }
 ]

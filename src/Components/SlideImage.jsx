@@ -16,7 +16,7 @@ function SlideImage() {
         return()=>clearInterval(intervel)
     },[image]) 
   return (    
-    <>
+    <> 
     <div className={styles.slider}>
         <div className={styles.slidersub} style={{position:'relative'}}>
      

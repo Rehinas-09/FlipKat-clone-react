@@ -1,34 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
-function Filter({ priceRange,
-     onPriceChange, 
+function Filter({ 
+     price,
+     setPrice,
      assured,
-     assuredChange,
-     brand, 
+     setAssured,
      selectedBrand,
      changeBrand,
-     selectedScreen,
-     onScreenChange,
-     resolution,
+      selectedScreen,
+      onScreenChange,
+    resolution,
      setResolution,
-     resolutionData,
      display,
-     setDisplay,
-     os,
-     setOs,
-     rating,
-     setRating
+      setDisplay,
+      os,
+      setOs,
+      rating,
+     setRating,
+    //  invoice,
+    //  setInvoice,
+    //  discount,
+    //  setDiscount
     }) {
-        const [brandSearch,setBarndSearch]=useState("")
-        const [ratingStar,setRatingStar]=useState([])
+        // const [brandSearch,setBarndSearch]=useState("")
+        // const [ratingStar,setRatingStar]=useState([])
         const [data,setData]=useState([])
-    const handleMinChange = (e) => {
+    const handleMinChange = (e) => { 
         const newMin = Number(e.target.value) 
-        onPriceChange({ min: newMin, max: priceRange.max })
+        console.log(newMin) 
+        setPrice({ min: newMin, max: price.max })
     }
     const handleMaxChange = (e) => { 
         const newMax = Number(e.target.value);
-        onPriceChange({ min: priceRange.min, max: newMax })
+         console.log(newMax)
+        setPrice({ min: price.min, max: newMax })
+    }
+    const assuredChange=(newValue)=>{ 
+        setAssured(newValue)
+      
     }
     const handleBrandChange=(brand,checked)=>{
         if(checked){ 
@@ -37,29 +46,47 @@ function Filter({ priceRange,
         else{
             changeBrand(selectedBrand.filter((b)=>b!==brand))
         }
-    }
+    } 
+    
     const handleResolution=(data,checked)=>{
         if(checked){
-            setResolution([...resolution,data])
+           setResolution([...resolution,data])
         }
         else{ 
             setResolution(resolution.filter((r)=>r!==data))
         }
     }  
-    const screenSizeRange=[
-        {label:"40 - 43 inch",min:40,max:43},
-        {label:"28 - 32 inch",min:28,max:32}
-    ] 
-    const handleScreenSize=(range,checked)=>{
-        if(checked){
-            onScreenChange([...selectedScreen,range])
-        }
-        else{
-            onScreenChange(
-                selectedScreen.filter((r)=>r.label!==range.label)
-            )
-        } 
-    }
+     const screenSizeRange=[
+         {label:"40 - 43 inch",min:40,max:43},
+         {label:"28 - 32 inch",min:28,max:32} //
+     ] 
+     const ratingRange=[
+       {label:"3★ & above",min:3,max:5},
+       {label:"4★ & above",min:4,max:5}
+     ]
+    // const discountRange=[
+    //     {label:"40% or more",min:40,max:100},
+    //     {label:"30% or more",min:30,max:100},
+    //     {label:"20% or more",min:20,max:100 }
+    // ]
+    const handleb
+     const handleScreenSize=(range,checked)=>{
+         if(checked){
+             onScreenChange([...selectedScreen,range])
+           else{
+             onScreenChange(
+                 selectedScreen.filter((r)=>r.label!==range.label)
+             )
+         } 
+     }
+    // const handleDiscountChange=(discount,checked)=>{
+    //     if(checked){
+    //         setDiscount([...discount],checked)
+    //     }
+    //     else{
+    //         setDiscount.filter((d)=>d.label!==discount.label)
+    //     }
+    // }
     const handleDisplay=(data,checked)=>{
         if(checked){
           setDisplay([...display,data])
@@ -68,28 +95,28 @@ function Filter({ priceRange,
             setDisplay(display.filter((d)=>d!==data))
         }
     }
-     const handleOs=(data,checked)=>{
-        if(checked){
-            setOs([...os,data])
-        }
-        else{
-            setOs(os.filter((d)=>d!==data))
-        }
-     } 
+       const handleOs=(data,checked)=>{
+           if(checked){
+              setOs([...os,data])
+           }
+          else{
+              setOs(os.filter((d)=>d!==data))
+          }
+       } 
       useEffect(()=>{   
         fetch("TvData.json")  
         .then(res=>res.json()) 
-        .then(data=>setData(data))
+        .then(data=>setData(data)) 
       },[]) 
         const uniqueBrand=[...new Set(data.map((item)=>item.brand))]
-        const resolutionUnique=[...new Set(data.map((res)=>res.resolution))]
-        const displayUnique=[...new Set(data.map((item)=>item.display))]
-        const osUnique=[...new Set(data.map((item)=>item.os))]
-        const uniqueRating=[...new Set(data.map((item)=>item.ratingSection))]
-        console.log(displayUnique)
+       const resolutionUnique=[...new Set(data.map((res)=>res.resolution))]
+         const displayUnique=[...new Set(data.map((item)=>item.display))]
+         const osUnique=[...new Set(data.map((item)=>item.os))]
+        // const uniqueRating=[...new Set(data.map((item)=>item.ratingSection))]
+        // console.log(displayUnique)
     return (
         <div className='filterContainer'>
-            <div className='filterContainerSub'>
+            <div className='filterContainerSub'> 
                 <div className='filterContainerMid'>
                     <div className='filterSection1'>
                         <div className='filterSection1Sub'>
@@ -155,11 +182,11 @@ function Filter({ priceRange,
                                 <div className='priceDot'>.</div> 
                                 <div className='priceDot'>.</div>
                             </div>
-
+                             
                         </div>
                         <div className='filterPriceFour'> 
                             <div className='priceMenuOne'>
-                                <select className='selecetMinPrice' value={priceRange.min} onChange={handleMinChange}>
+                                <select className='selecetMinPrice' value={price.min} onChange={handleMinChange}>
                                     <option className='selectMinOption' value={0}>Min</option>
                                     <option className='selectMinOption' value={15000}>₹15000</option>
                                     <option className='selectMinOption' value={30000}>₹30000</option>
@@ -171,7 +198,7 @@ function Filter({ priceRange,
                             </div>
                             <div className='priceMid'>to</div>
                             <div className='priceMenuTwo'>
-                                <select className='selectMaxPrice' value={priceRange.max} onChange={handleMaxChange}>
+                                <select className='selectMaxPrice' value={price.max} onChange={handleMaxChange}>
                                     <option className='selectMaxOption' value={15000}>₹15000</option>
                                     <option className='selectMaxOption' value={30000}>₹30000</option>
                                     <option className='selectMaxOption' value={40000}>₹40000</option>
@@ -182,7 +209,7 @@ function Filter({ priceRange,
                             </div>
                         </div>
                     </div>
-                    {/* assured section */}
+                    {/* assured section eee*/}
                     <div className="assured-section">
                         <div className="labelAssured"> 
                             <input type='checkbox' checked={assured} onChange={(e)=>assuredChange(e.target.checked)} ></input>
@@ -194,7 +221,8 @@ function Filter({ priceRange,
                             <span className='QmarkSpan'>?</span>
                         </div>
                     </div>
-                    <div className='brand-section'>
+                    {/* brand Section */}
+                  <div className='brand-section'>
                         <div className='brandSone'>
                            <div className='brandName'>
                             Brand 
@@ -207,15 +235,16 @@ function Filter({ priceRange,
                            <div className='brandStwoSub'>
                              <div className='searchBrand'>
                                 <svg width="20" height="20" viewBox="0 0 17 18" className="zmbstL searchIcon" xmlns="http://www.w3.org/2000/svg"><g fill="#878787" fill-rule="evenodd"><path class="JVQyl9" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="JVQyl9" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
-                                <input type="text" placeholder='Search Brand' value={brandSearch} onChange={(e)=>setBarndSearch(e.target.value)} className='SB '></input>
-                             </div> 
+                                <input type="text" placeholder='Search Brand'  className='SB '></input> 
+                                
+                             </div>  
                               {   
 
                                 uniqueBrand.map((value,index)=>(
                                            
                                      <div className='brandCheck' key={index}> 
                                         <div className='brandCheckSub'> 
-                                            <input type='checkbox' value="brand" checked={selectedBrand.includes(value)} onChange={(e)=>handleBrandChange(value,e.target.checked)}></input>
+                                            <input type='checkbox' value={value} checked={selectedBrand.includes(value)} onChange={(e)=>handleBrandChange(value,e.target.checked)}></input>
                                             <div className='brandNames'>
                                                 {value}
                                             </div>   
@@ -227,7 +256,8 @@ function Filter({ priceRange,
                            </div>
                         </div>
                     </div>
-                    <div className='screensize' >
+                    {/* screesize section */}
+                   <div className='screensize' >
                         <div className='brandSone'>
                             <div className='brandName'>
                                 Screen Size
@@ -247,20 +277,14 @@ function Filter({ priceRange,
                                         </div>
                                     </div>
                                 ))
-                               }
+                               } 
                             </div>
                                     
                         </div>
 
                     </div>
-                    <div className='screensize'>
-                        <div className='brandSone'>
-                            <div className='brandName'>
-                                Ideal for Viewing Distance
-                            </div>
-                             <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
-                        </div>
-                    </div>
+                    {/* resolution section */}
+                    
                      <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
@@ -287,7 +311,8 @@ function Filter({ priceRange,
                         </div>
 
                     </div> 
-                       <div className='screensize'>
+                    {/* display section */}
+                      <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                 DISPLAY TECHNOLOGY
@@ -313,6 +338,7 @@ function Filter({ priceRange,
                         </div>
 
                     </div> 
+                    {/* os section */}
                       <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
@@ -342,20 +368,20 @@ function Filter({ priceRange,
                      <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
-                                OPERATING SYSTEM
+                               CUSTOMER RATING 
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                { 
-                               (uniqueRating!=="")&&
-                                uniqueRating.map((data,index)=>(
+                            
+                                ratingRange.map((data,index)=>(
                                     <div className='screen_size' key={index}> 
                                         <div className='screen_sizeSub'>
                                            <div className='screen_sizeLabel'>
-                                            <input type="checkbox" value={data}  onChange={(e)=>handleOs(()=>setRating(rating))}></input>
-                                            <div className='screenSizeRange'>{data}</div> 
+                                            <input type="checkbox" value={data.label}  checked={rating.some((r)=>r.label===data.label)} onChange={(e)=>handleRating(e.target.checked)}></input>
+                                            <div className='screenSizeRange'>{data.label}</div> 
                                             </div> 
                                         </div>
                                     </div>
@@ -366,6 +392,54 @@ function Filter({ priceRange,
                         </div>
 
                     </div> 
+                    {/* <div className='screensize'>
+                        <div className='brandSone'>
+                            <div className='brandName'>
+                               GST INVOICE AVAILABLE 
+                            </div>
+                             <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
+                        </div>
+                        <div className='barndStwo'>
+                            <div className="brandStwoSub">
+                                    <div className='screen_size'> 
+                                        <div className='screen_sizeSub'>
+                                           <div className='screen_sizeLabel'>
+                                               <input  type="checkbox"  checked={invoice}  onChange={(e) => setInvoice(e.target.checked)}/>
+                                            <div className='screenSizeRange'>Gst invoice Available</div> 
+                                            </div> 
+                                        </div>
+                                    </div>  
+                            </div>
+                                    
+                        </div>
+
+                    </div> 
+                    <div className='screensize'>
+                        <div className='brandSone'>
+                            <div className='brandName'>
+                                DISCOUNT
+                            </div>
+                             <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
+                        </div>
+                        <div className='barndStwo'>
+                            {
+                                discountRange.map((value,index)=>(
+                                    <div className="brandStwoSub" key={index}>
+                                    <div className='screen_size'> 
+                                        <div className='screen_sizeSub'> 
+                                           <div className='screen_sizeLabel'>
+                                               <input  type="checkbox" value={value.label} checked={discount.some((d)=>d.label===discount.label)}  onChange={(e) =>handleDiscountChange(discount,e.target.checked)}/>
+                                            <div className='screenSizeRange'>{value.label}</div> 
+                                            </div> 
+                                        </div>
+                                    </div>  
+                                </div>
+                                ))
+                            }
+                                    
+                        </div>
+
+                    </div>  */}
                 </div>
             </div>
 

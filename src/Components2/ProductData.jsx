@@ -83,7 +83,7 @@ function ProductData({products}) {
                               </div>
                               {
                                 (value.discount!=="")&&(
-                                                                    <div className='PDCTsub3'>
+                                   <div className='PDCTsub3'>
                                  <div className='PDCTsub3sub'>
                                   <div className='PDCTsub3sub1'>
                                     {value.discount}
