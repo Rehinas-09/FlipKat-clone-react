@@ -5,6 +5,8 @@ import ProductHead from './Components2/ProductHead'
 import ProductData from './Components2/ProductData'
 import Filter from './Components2/Filter'
 import './Components2/style.css'
+import footer from './Components/Footer'
+import Footer from './Components/Footer'
 
 function Parent2() {
    const[price,setPrice]=useState({min:0,max:60000})
@@ -16,8 +18,8 @@ function Parent2() {
   const [display,setDisplay]=useState([])
   const [os,setOs]=useState([])
    const [rating,setRating]=useState([])
-  //  const [invoice,setInvoice]=useState(false)
-  //  const [discount,setDiscount]=useState([])
+   const [invoice,setInvoice]=useState(false)
+    const [discount,setDiscount]=useState([])
   useEffect(()=>{
     fetch("TvData.json")   
     .then(res=>res.json())   
@@ -37,14 +39,11 @@ function Parent2() {
      const displayMatch=display.length===0||display.includes(item.display)
      const osMatch=os.length===0||os.includes(item.os)
     const ratingMath=rating.length===0||rating.some(range=>item.rating_star>=range.min && item.rating_star<=range.max)
-// const discountMatch=discount.length===0||discount.some((range)=>item.dis>=range.min&&item.dis<=range.max)
-
-  
-
-//   const invoiceMatch=invoice.length==0||item.invoice=="available"
-    return priceMatch&&assuredMatch&&brandMatch&&screenMatch &&resolutionMatch&&displayMatch&&osMatch &&ratingMath//&&invoiceMatch&&discountMatch;
+    const discountMatch=discount.length===0||discount.some((range)=>item.dis>=range.min&&item.dis<=range.max)
+    const invoiceMatch=invoice.length==0||item.invoice=="available"
+    return priceMatch&&assuredMatch&&brandMatch&&screenMatch &&resolutionMatch&&displayMatch&&osMatch &&ratingMath&&invoiceMatch&&discountMatch;
   } 
-) //
+) 
 
   return (   
     <div> 
@@ -70,17 +69,18 @@ function Parent2() {
                setOs={setOs}
                rating={rating}
                setRating={setRating}
-              //  invoice={invoice}
-              //  setInvoice={setInvoice}
-              //  discount={discount}
-              //  setDiscount={setDiscount}/>  
-               />
-          <div>  
+               invoice={invoice}
+               setInvoice={setInvoice}
+               discount={discount}
+               setDiscount={setDiscount}/>  
+              <div>  
               <ProductHead />
             <ProductData products={filterProducts}/> 
+         
           </div>
-      </div> 
       </div>
+      </div> 
+          <Footer/>
     </div> 
   )
 }

@@ -17,10 +17,10 @@ function Filter({
       setOs,
       rating,
      setRating,
-    //  invoice,
-    //  setInvoice,
-    //  discount,
-    //  setDiscount
+    invoice,
+     setInvoice,
+     discount,
+     setDiscount
     }) {
         // const [brandSearch,setBarndSearch]=useState("")
         // const [ratingStar,setRatingStar]=useState([])
@@ -64,29 +64,39 @@ function Filter({
        {label:"3★ & above",min:3,max:5},
        {label:"4★ & above",min:4,max:5}
      ]
-    // const discountRange=[
-    //     {label:"40% or more",min:40,max:100},
-    //     {label:"30% or more",min:30,max:100},
-    //     {label:"20% or more",min:20,max:100 }
-    // ]
-    const handleb
+     const discountRange=[
+        {label:"40% or more",min:40,max:100},
+        {label:"30% or more",min:30,max:100},
+        {label:"20% or more",min:20,max:100 }
+    ]
+     
      const handleScreenSize=(range,checked)=>{
          if(checked){
              onScreenChange([...selectedScreen,range])
+         }
            else{
              onScreenChange(
                  selectedScreen.filter((r)=>r.label!==range.label)
              )
          } 
      }
-    // const handleDiscountChange=(discount,checked)=>{
-    //     if(checked){
-    //         setDiscount([...discount],checked)
-    //     }
-    //     else{
-    //         setDiscount.filter((d)=>d.label!==discount.label)
-    //     }
-    // }
+     const handleRating=(rate,checked)=>{
+      if(checked){
+        setRating([...rating,rate])
+      }
+      else{
+        const updateRating=rating.filter((r)=>r.label!==rate.label)
+        setRating(updateRating)
+      }//
+     }
+     const handleDiscountChange=(dis,checked)=>{
+         if(checked){
+             setDiscount([...discount,dis])
+         }//
+         else{
+             setDiscount(discount.filter((d) => d.label !== dis.label));
+        }
+     }
     const handleDisplay=(data,checked)=>{
         if(checked){
           setDisplay([...display,data])
@@ -210,7 +220,7 @@ function Filter({
                         </div>
                     </div>
                     {/* assured section eee*/}
-                    <div className="assured-section">
+                    <div className="assured-section"> 
                         <div className="labelAssured"> 
                             <input type='checkbox' checked={assured} onChange={(e)=>assuredChange(e.target.checked)} ></input>
                             <div className="Assuredfil">
@@ -331,8 +341,8 @@ function Filter({
                                             </div> 
                                         </div>
                                     </div>
-                                ))
-                               } 
+                                )) }
+                        
                             </div>
                                     
                         </div>
@@ -378,9 +388,9 @@ function Filter({
                             
                                 ratingRange.map((data,index)=>(
                                     <div className='screen_size' key={index}> 
-                                        <div className='screen_sizeSub'>
+                                        <div className='screen_sizeSub'> 
                                            <div className='screen_sizeLabel'>
-                                            <input type="checkbox" value={data.label}  checked={rating.some((r)=>r.label===data.label)} onChange={(e)=>handleRating(e.target.checked)}></input>
+                                            <input type="checkbox" value={data.label}  checked={rating.some((r)=>r.label===data.label)} onChange={(e)=>handleRating(data,e.target.checked)}></input>
                                             <div className='screenSizeRange'>{data.label}</div> 
                                             </div> 
                                         </div>
@@ -392,7 +402,8 @@ function Filter({
                         </div>
 
                     </div> 
-                    {/* <div className='screensize'>
+                    {/* gst invoice section */}
+                    <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                GST INVOICE AVAILABLE 
@@ -409,11 +420,10 @@ function Filter({
                                             </div> 
                                         </div>
                                     </div>  
-                            </div>
-                                    
+                            </div>            
                         </div>
-
                     </div> 
+                    {/* discount section */}
                     <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
@@ -428,10 +438,10 @@ function Filter({
                                     <div className='screen_size'> 
                                         <div className='screen_sizeSub'> 
                                            <div className='screen_sizeLabel'>
-                                               <input  type="checkbox" value={value.label} checked={discount.some((d)=>d.label===discount.label)}  onChange={(e) =>handleDiscountChange(discount,e.target.checked)}/>
+                                               <input  type="checkbox" value={value.label} checked={discount.some((d)=>d.label===value.label)}  onChange={(e) =>handleDiscountChange(value,e.target.checked)}/>
                                             <div className='screenSizeRange'>{value.label}</div> 
                                             </div> 
-                                        </div>
+                                        </div> 
                                     </div>  
                                 </div>
                                 ))
@@ -439,7 +449,20 @@ function Filter({
                                     
                         </div>
 
-                    </div>  */}
+                    </div>  
+                </div>
+                <div className="filterColumnTwo">
+                    <a className="filterAtag">
+                    
+                    <div className='needHelp'>
+                        <span>Need Help?</span> 
+                    </div>
+                    <div className='helpMe'>
+                       <span>Help me decide</span>
+                       <svg width="6" height="12" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className="VQiHOk"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#2874f0" class="jVpjWi"></path></svg>
+                    </div>
+                    <img src='https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/buying-guide-illustration_4dd325.png'></img>
+                    </a>
                 </div>
             </div>
 

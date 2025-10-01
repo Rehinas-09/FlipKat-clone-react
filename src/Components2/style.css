@@ -494,7 +494,7 @@
 }
 .productDataContent{
     padding-left: 25px;
-    width: clac(100% - 200px);
+    width: calc(100% - 200px);
     display:flex;
     flex-direction: row;
 
@@ -531,6 +531,10 @@
     font-weight: 500;
     font-size: 12px;
     background-color: #388e3C;
+}
+.productDataContentTwo{
+    padding-left: 25px;
+    width: 41.66%;
 }
 .rating-star{
     margin: 2px 0 0 2px;
@@ -1046,4 +1050,90 @@ font-family: "inter-Regular";
     width:calc(100% - 14px - 11px);
     cursor: pointer;
     font-family: "inter-Regular";
+}
+.filterColumnTwo{
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+.filterA{
+    text-align: center;
+    padding-top: 30px;
+    display: block;
+    cursor: pointer;
+}
+.needHelp{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "inter-Regular";
+}
+.helpMe{
+   color: #2874f0;
+   line-height: 1;
+   font-size: 18px;
+   margin: 5px 0 20px;
+   font-family: "inter-Regular";
+}
+.filterAtag{
+    margin-top: 30px;
+}
+.VQiHOk{
+    margin-left: 4px;
+    transform: rotate(180deg);
+}
+.electronic-Container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left:0;
+    top:40px;
+    background-color: #fff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.16);
+    z-index: 99;
+}
+.electro-SubOne{
+ display: flex;
+ flex-direction: column;
+ padding: 0 25px;
+ width: 100%;
+}
+.electro-Head{
+    margin-top: 5px;
+    padding: 8px 0;
+    font-weight: 500;
+    color: #212121;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "inter-Semibold";
+}
+.electro-Head::after{
+        content: "►";
+        font-size: 8px;
+        color: rgb(194,194,194);
+        margin-left: 6px;
+        font-weight: 500;
+        
+}
+.electro-title{
+    padding: 5px 0;
+    color: #666;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "inter-Regular";
+    
+}
+.electro-subTwo{
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    width: 100%;
 }
