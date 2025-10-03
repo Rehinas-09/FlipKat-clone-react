@@ -7,6 +7,7 @@ import Filter from './Components2/Filter'
 import './Components2/style.css'
 import footer from './Components/Footer'
 import Footer from './Components/Footer'
+import SmNavbar from './Components2/SmNavbar'
 
 function Parent2() {
    const[price,setPrice]=useState({min:0,max:60000})
@@ -20,11 +21,18 @@ function Parent2() {
    const [rating,setRating]=useState([])
    const [invoice,setInvoice]=useState(false)
     const [discount,setDiscount]=useState([])
+    const [width,setWidth]=useState(window.innerWidth)
   useEffect(()=>{
     fetch("TvData.json")   
     .then(res=>res.json())   
     .then(data=>setData(data)) 
   },[]) 
+  useEffect(()=>{
+    const handleResize=()=>setWidth(window.innerWidth)
+    window.addEventListener("resize",handleResize)
+     return ()=>window.removeEventListener("resize",handleResize)
+  })
+
  
   // const uniqueBrand=[...new Set(data.map((item)=>item.barnd))]
   const resolutionData=data.map((item)=>item.resolution)
@@ -47,7 +55,12 @@ function Parent2() {
 
   return (   
     <div> 
-      <Navbar/>  
+      {width<=1024?(<div>
+        <SmNavbar/>
+      </div>):(
+        
+        <div>
+          <Navbar/>  
       <Navbar2></Navbar2> 
       <div className='productMainContainer'> 
         <div className='productSubContainer'> 
@@ -81,6 +94,9 @@ function Parent2() {
       </div>
       </div> 
           <Footer/>
+        </div>  
+      )}
+      
     </div> 
   )
 }
