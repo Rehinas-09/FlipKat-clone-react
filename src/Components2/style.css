@@ -1330,101 +1330,151 @@ font-family: "inter-Regular";
     align-items: center;
     justify-content: center;
 }
-.sm-section3{
+ .sm-section3{
     position: absolute;
-    top: 100px;
+    top: 94px;
+    left: 0;
+    right: 0;
+    transform: translate(0px);
     height: 56px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%  
+    overflow: hidden;
 }
-.sm-section3sub{
+.smsection3sub{
+ background-color: rgb(255,255,255);
+ display: flex;
+ flex-direction: column;
+ flex: 1;
+ align-items: stretch;
+ position: relative;
 
 }
-.sm-section3sub{
-    min-height: 1px;
-    min-width: 1px;
+.smsectionmid{
+    min-height: 56px;
+    background-color: rgb(255,255,255);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+.smsectionboxes{
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.smsectionboxesmid{
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    align-items: center;
+}
+.smsectionboxessub{
+    height: 56px;
+    padding-left: 11px;
+    display: flex;
     justify-content: space-between;
+    padding-right: 11px;
+}
+.smboxsize{
+    display: flex;
+    flex-direction: row;
     height: 56px;
     width: 490px;
-    margin-right: 11px;
-    margin-left: 11px;
-
 }
-.sm-boxes{
+.sm-add-container{
     display: flex;
-    flex-direction: row;
     align-items: stretch;
-    position: absolute;
+    flex-direction: column;
+    width:1024px;
     left: 0;
-    top:0;
-    height: 100%;
-    width: 100%;
-}
-.sm-box{
-    transform: translate(0px,0px);
-     display: flex;
-     flex-direction: column;
-     align-items: stretch;
-     position: absolute;
-     top: 0;
-     left: 0  
+    top: 150px;
     
-} 
-.sm-box-sub{
-  position: relative;
-  background-color: rgb(255,255,255);
-  border-color: rgb(219,219,219);
-  padding-left: 4px;
-  margin-top: 8px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
+    
 }
-.sm-box-icon{
+.sm-add-sub{
     display: flex;
-    align-items: center;
-    flex-basis: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 8px;
-    width: 32px;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgb(255,255,255);
+}
+.sm-add-mid{
+    display: flex;
+    position: relative;
+    width: 1024px;
+    height: 455px;
+}
+.sm-add-image{
+    filter: none;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    width: 1024px;
+    height: 455px;
+    margin: 0;
 
 }
-.sm-boxes-des{
-    display: flex;
-
-}
-.topsale{
-    color: rgb(33,33,33);
-    font-size: 12px;
-    font-family: 'roboto-Regular';
-    line-height: 16px;
-}
-.sm{
-  color:"black";
-   
-}
-.sm-box2{
-    transform: translate(117px,0px);
-    position: absolute;
-    align-items: stretch;
+.sm-main-container{
+   margin-top: 130px;
     display: flex;
     flex-direction: column;
-    left:0;
-    right: 0;
+    align-items: stretch;
+    
+     left: 0;
+    top: 150px;
 }
-.sm-box3{
-    transform: translate(211px,0px);
+@media  screen and (max-width:1024px) {
+ .productDataContainer{
+     display: flex;
+     flex-direction: column;
+ }
+ .productDataContainerSub{
+    padding: 0;
+ }
+ .productDataContainerA{
+    display: flex;
+    flex-direction: row;
+    min-height: 154px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+ }
+ .productDataAdd{
+    display: none;
+ }
+ .productDataLove{
+    display:none
+ }
+.productDataImg{
+    height: 120px;
+    width: 90px;
+}
+    
+ 
+ .productDataImage{
+    height: 120px;
+    width: 96px;
+    margin-top: 16px;
+    margin-left: 6px;
+ }
+ .ProductDCOne{
+    color: rgb(17,17,18);
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'inter-Regular';
+ }
+
+.productDataContentTwo {
+    display: none;
+ }
+ .productDataContent{
+   display: flex;
+   align-items: flex-start;
+   padding-left: 12px;
+   padding-right: 12px;
+   margin-bottom: 6px;
+   width:100%
+ }
+ .ProductDcTwoSpan1{
+    display: none;
+ }
+
 }

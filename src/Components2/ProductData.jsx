@@ -105,8 +105,7 @@ function ProductData({products}) {
 
               <div className="PDCTsub4">
                 <div className="PDCTupto">Upto </div>
-                <div className="PDCToffon">{value.Exchange}</div>
-                <div className="PDCTexchange"> Off on Exchange</div>
+             <div className="PDCTexchange"> Off on Exchange</div>
               </div>
             </div>
           </div>

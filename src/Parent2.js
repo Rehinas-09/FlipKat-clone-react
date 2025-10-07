@@ -8,6 +8,7 @@ import './Components2/style.css'
 import footer from './Components/Footer'
 import Footer from './Components/Footer'
 import SmNavbar from './Components2/SmNavbar'
+import Smimage from './Components2/Smimage'
 
 function Parent2() {
    const[price,setPrice]=useState({min:0,max:60000})
@@ -57,8 +58,13 @@ function Parent2() {
     <div> 
       {width<=1024?(<div>
         <SmNavbar/>
+        <div className='sm-main-container'>
+        <Smimage/>
+        <ProductData products={filterProducts}/>
+     
+        </div>
       </div>):(
-        
+          
         <div>
           <Navbar/>  
       <Navbar2></Navbar2> 

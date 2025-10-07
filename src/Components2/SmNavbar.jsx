@@ -2,9 +2,9 @@ import React from 'react'
 import './style.css'
 function SmNavbar() {
   return (
-    <div className='sm-container sm-Container'>
-      <div className='sm-container-sub sm-Container'>
-        <div className='sm-section1'>
+    <div className=' sm-Container'>
+      <div className='sm-container-sub sm-Container'> */}
+         <div className='sm-section1'>
           <div className='sm-section1Sub'>
             <a href='/' className='smflipArrow'>
               <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg"><path d="M17.556 7.847H1M7.45 1L1 7.877l6.45 6.817" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
@@ -25,7 +25,7 @@ function SmNavbar() {
               <span>Login</span>
             </a>
           </div>
-        </div>
+        </div> 
         <div className='sm-section2'>
           <div className='sm-section2-sub'>
             <div className='sm-section2-mid'>
@@ -44,77 +44,23 @@ function SmNavbar() {
               </div>
             </div>
           </div>
-        </div>
-        <div className='sm-section3'>
-          <div className='sm-section3sub'>
-            <div className='sm-boxes'>
-              <div className='sm-box'>
-                <div className='sm-box-sub'>
-                  <div className='sm-box-icon'>
-                    <img src="https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=90" alt="" class="" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim1.flixcart.com/www/32/32/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=80 1x, https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60 2x, " fetchpriority="auto" height="32" width="32" ></img>
+        </div> 
+         <div className='sm-section3'>
+            <div className='smsection3sub'>
+              <div className='smsectionmid'>
+                <div className='smsectionboxes'>
+                  <div className='smsectionboxesmid'>
+                <div className='smsectionboxessub'>
+                  <div className='smboxsize'>
+                    
                   </div>
-                  <div className='sm-boxes-des'>
-                    <span className='topsale'>Top Sale Discounts</span>
+                </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='sm-boxes'>
-              <div className='sm-box2'>
-                <div className='sm-box-sub'>
-                  <div className='sm-box'>
-                    <div className='sm-box-icon'>
-                      <img src="https://rukminim1.flixcart.com/www/64/64/promos/21/03/2025/e87c76fe-6dea-4cdb-8453-e53612372d4d.jpg?q=60" alt="" class="" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim1.flixcart.com/www/32/32/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=80 1x, https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60 2x, " fetchpriority="auto" height="32" width="32" ></img>
-                    </div>
-                    <div className='sm-boxes-des'>
-                      <span className='topsale'>QLED</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div className='sm-boxes'>
-              <div className='sm-box3'>
-                <div className='sm-box-sub'>
-                  <div className='sm-box-icon'>
-                    <img src="https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=90" alt="" class="" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim1.flixcart.com/www/32/32/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=80 1x, https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60 2x, " fetchpriority="auto" height="32" width="32" ></img>
-                  </div>
-                  <div className='sm-boxes-des'>
-                    <span className='topsale'>Top Sale Discounts</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='sm-boxes'>
-              <div className='sm-box4ffffgggggffggfgggggggvbbvbvbvbbvbvbvbvbbbbvvbbbbvbbvvbbbbbbbbvvbbvvbbvvbbbbvvbbbbbbbvbbbbvbvbvbvbvbvbvbvbbvbvbvbvvvbbvvbbvvbbvvbbvvbbbvvbvbvbvbvbvbvvbvbvbvbvbbvbvbvbvbvbvbvbvbvbvbffgtggbbgbggggbbggbbggbgbbggbbgggggggbbgggbbggbbggbbggbbbgggbbggbbggbbbbbggbbgbbggbbgbbbbbbbbbjjsssssssssssssssssjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhhhhhhhhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhuuuhhuuhhuuuhhuuhhuuhhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhuuhhhuhhhhuhuhuhuhuhuhuhuhuhhuhuhhuhuhuhuhuhhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuhuuuhhuhuuhuuhhuuhumkmkmkmkmkmkmmkmmkmkmkmkmmkmmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmkmmkmkmmkkmkmkmkmkmmkmkmkmkmkmkmkmmkmmmmkmkmkmmkmkmkkm666666666666666666666666666666666666666666666666666666666666666yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccjjvvvvvvvvvccccccccbbbbbbcccccccccccccccccggbbggbbggbbgbgbbggbbggb'>
-                  <div className='sm-box-sub'>dddddddddddfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgf
-                  <div className='sm-box-icon'>
-                    <img src="https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=90" alt="" class="" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim1.flixcart.com/www/32/32/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=80 1x, https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60 2x, " fetchpriority="auto" height="32" width="32" ></img>
-                  </div>
-                  <div className='sm-boxes-des'>
-                    <span className='topsale'>Top Sale Discounts</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div className='sm-boxes'>
-              <div className='sm-box'>
-                  <div className='sm-box-sub'>
-                  <div className='sm-box-icon'>
-                    <img src="https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=90" alt="" class="" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim1.flixcart.com/www/32/32/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=80 1x, https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60 2x, " fetchpriority="auto" height="32" width="32" ></img>
-                  </div>
-                  <div className='sm-boxes-des'>
-                    <span className='topsale'>Top Sale Discounts</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
+         </div>
+       </div> 
     </div>
 
   )
