@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
-
+import {Star} from "lucide-react"
 function ProductData({products}) {
-
+ const [screen,setScreen]=useState(window.innerWidth)
+ useEffect(()=>{
+  const handleResize=()=>{
+       setScreen(window.innerWidth<=1200)
+  }
+  window.addEventListener("resize",handleResize)
+  return()=>window.removeEventListener('resize',handleResize)
+ })
   return (
    <>
   {products.map((value, index) => (
@@ -57,11 +64,111 @@ function ProductData({products}) {
                       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg=="
                       className="rating-star"
                       alt="rating"
-                    />
+                    /> 
                   </div>
                 </span>
+              <div className='productSpanplusRating'>
+                <span className="ProductDcTwoSpanSM">
+                    <div className='pratingstar'>
+                           <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" 
+                       viewBox="0 0 24 24" 
+                      fill="#388E3C">
+                         <path d="M12 .587l3.668 7.431L24 9.75l-6 5.849L19.335 24 12 19.897 4.665 24 6 15.599 0 9.75l8.332-1.732z"/>
+                      </svg>
+                    </div>
+                    <div className='pratingstar'>
+                           <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" 
+                       viewBox="0 0 24 24" 
+                      fill="#388E3C">
+                         <path d="M12 .587l3.668 7.431L24 9.75l-6 5.849L19.335 24 12 19.897 4.665 24 6 15.599 0 9.75l8.332-1.732z"/>
+                      </svg>
+                    </div>
+                    <div className='pratingstar'>
+                           <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" 
+                       viewBox="0 0 24 24" 
+                      fill="#388E3C">
+                         <path d="M12 .587l3.668 7.431L24 9.75l-6 5.849L19.335 24 12 19.897 4.665 24 6 15.599 0 9.75l8.332-1.732z"/>
+                      </svg>
+                    </div>
+                    <div className='pratingstar'>
+                           <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" 
+                       viewBox="0 0 24 24" 
+                      fill="#388E3C">
+                         <path d="M12 .587l3.668 7.431L24 9.75l-6 5.849L19.335 24 12 19.897 4.665 24 6 15.599 0 9.75l8.332-1.732z"/>
+                      </svg>
+                    </div>
+                    <div className='pratingstar'>
+                         <svg xmlns="http://www.w3.org/2000/svg" 
+                      width="24" height="24" 
+                       viewBox="0 0 24 24">
+                     <defs>
+                   <linearGradient id="half-green">
+                   <stop offset="50%" stopColor="#388E3C"/>
+                       <stop offset="50%" stopColor="#e5e7eb"/>
+                 </linearGradient>
+                  </defs>
+                     <path fill="url(#half-green)" 
+                         d="M12 .587l3.668 7.431L24 9.75l-6 5.849L19.335 24 
+                      12 19.897 4.665 24 6 15.599 0 9.75l8.332-1.732z"/>
+              </svg>
+                    </div>
+
+              </span>
                 <span className="ProductDcTwoSpan2">{value.rating}</span>
+                <div className='ProductDcTwoSpan2Sm'>({value.rating_only})</div>
               </div>
+               <div className="PDCTsub2">
+                <img
+                  height="21"
+                  src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_9e47c1.png"
+                  alt="icon"
+                  className='smfilpicone'
+                />
+              </div>
+              </div>
+              <div className='productofferwithcash'>
+                <div className='offerwithcashsub'>
+                  <div className='offerArrow'>
+                    <svg width="17" height="17" viewBox="0 0 12 12" fill="none"><path d="M6.73461 1V8.46236L9.5535 5.63352L10.5876 6.65767L5.99384 11.2415L1.41003 6.65767L2.42424 5.63352L5.25307 8.46236V1H6.73461Z" fill="#008C00"></path></svg>
+                    <div className="PDCToff">{value.off}%</div>
+                  </div>
+                  <div className="PDCTactual">{value.total_Price}</div>
+                  <div className="PDCTprice">{value.price}</div>
+                </div>
+                    
+              </div>
+              <div className='smbankoffer'>
+                <div className='smwow'>
+                  <img className='smwowimage' src='https://rukminim1.flixcart.com/www/76/32/promos/23/06/2025/cca911bb-9c66-4490-826e-9d9b807d62a5.png?q=90'/>
+                </div>
+                <div  className='smBankPrice'>
+                     {value.bank_price}
+                </div>
+                <div className='smwithbankoff'>
+                      with Bank offer
+                </div>
+              
+              </div>
+            {
+              value.discount!==""?(
+                <div className='sm-topdiscount'>
+                <div className='smdiscount'>
+                  {value.discount}
+                </div>
+              </div>
+              ):(
+                <div className="smexchange">
+                  Upto {value.Exchange} Off on Exchange
+                </div>
+              )
+            }  
+            <div className="smautherization">
+              <div className='smauthername'>{value.brand} authorised installation</div>
+            </div>
               <div className="ProductDcTwoSpan3">
                 <ul className="ProductDcTwoUl">
                   <li className="ProductDcList">{value.hd}</li>
@@ -104,13 +211,56 @@ function ProductData({products}) {
               )}
 
               <div className="PDCTsub4">
-                <div className="PDCTupto">Upto </div>
+                <div className="PDCTupto">Upto {value.Exchange}</div>
              <div className="PDCTexchange"> Off on Exchange</div>
               </div>
             </div>
           </div>
         </a>
+        <div className='productdisbox'>
+            <div className="productdisbox1">
+               <div className='productdiscontent'>
+                   {value.hd}
+               </div>
+            </div>
+             <div className="productdisbox1">
+               <div className='productdiscontent'>
+                  {value.model}
+               </div>
+            </div> 
+             <div className="productdisbox1">
+                  <div className='productdiscontent'>
+                    {value.Launch_Year}
+               </div>
+            </div>
+             <div className="productdisbox1">
+              <div className='productdiscontent'>
+                  Total Sound Output: {value.sound} W
+               </div>
+            </div>
+        </div>
       </div>
+      {
+        screen&&(
+          <>
+          {index+1===4 &&(
+             <div className='topSalebox'>
+              <div className='topSalesubbox'>
+                 <div className='topSaleshead'>
+                  <div className='topSalesheadsub'>
+                    <div className='smSalesTop'>
+
+                    </div>
+                    <div className='smSalesArrow'></div>
+                  </div>
+                 </div>
+                 <div></div>
+              </div>
+             </div>
+          )}
+          </>
+        )
+      }
     </div>
   ))}
 </>

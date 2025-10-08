@@ -3,6 +3,7 @@
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/a/i/m/-original-imah6swmf3zhkgzp.jpeg?q=70",
         "name":"InnoQ Spectra 108 cm (43 inch) Full HD LED Smart Android TV with 30W Boom Speakers | 1000+ Smart Apps ...",
         "rating":"9,561 Rating & 998 Reviews",
+        "rating_only":"9,561",
         "rating_star":4,
         "hd":"Full HD | LED",
         "model":"Model ID: 43S-SPECTRA-V2",
@@ -12,6 +13,7 @@
         "exact_price":11990,
         "total_Price":"39,999",
         "Offer":"70% Off",
+        "off":70,
         "discount":"Top Discount of the Sale",
         "Exchange":"₹2,000", 
         "brand":"InnoQ", 
@@ -22,13 +24,16 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":70
+        "dis":70,
+        "bank_price":"₹11,249",
+        "sound":30
 
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/5/8/y/st-4303sfu-samtonic-original-imahfdv8mbcrzex7.jpeg?q=70",
         "name":"Samtonic 110 cm (43 inch) Full HD LED Smart Android TV",
         "rating":"93 Rating & 9 Reviews",
+        "rating_only":"93",
         "rating_star":3.9,
         "hd":"Full HD | LED",
         "model":"Model ID: ST-4303SFU",
@@ -38,6 +43,7 @@
         "exact_price":17560,
         "total_Price":"34,500",
         "Offer":"49% Off",
+        "off":49,
         "discount":"",
         "left":"only 4 left",
         "Exchange":"₹2,000",
@@ -49,13 +55,16 @@
         "os":"Android",
         "ratingSection":"3★ & above",
         "invoice":"available",
-        "dis":49
+        "dis":49,
+        "bank_price":"₹14,056",
+        "sound":30
 
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/w/a/q/-original-imah3yh6bmjtghny.jpeg?q=70",
         "name":"Samsung 108 cm (43 inch) Full HD LED Smart Tizen TV with HDR | PurColor | Dolby Digital Plus | Hyper R...",
          "rating":"66,906 Rating & 5,578 Reviews",
+         "rating_only":"66,906",
         "rating_star":4.4,
         "hd":"Full HD | LED",
         "model":"Model ID: UA43T5450AKXXL",
@@ -65,6 +74,7 @@
         "exact_price":21990,
         "total_Price":"37,900",
         "Offer":"41% Off",
+        "off":41,
         "discount":"Top Discount of the Sale",
         "left":"",
         "Exchange":"₹2,750" , 
@@ -76,12 +86,15 @@
         "os":"Tizen",
         "ratingSection":"4★ & above",
         "invoice":"not available",
-        "dis":41
+        "dis":41,
+        "bank_price":"₹21,990",
+        "sound":20
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/u/v/k/-original-imaheeg2cbrz87es.jpeg?q=70",
         "name":"Thomson World Cup 108 cm (43 inch) Full HD LED Smart Linux TV with 40 W Sound Output & Bezel-Less Desi...",
         "rating":"49,286 Rating & 6317 Reviews",
+        "rating_only":"49,286",
         "rating_star":4.3,
         "hd":"Full HD | LED",
         "model":"Model ID: A4Alpha005BL",
@@ -91,6 +104,7 @@
         "exact_price":12899,
         "total_Price":"22,999",
         "Offer":"43% Off",
+        "off":43,
         "discount":"Top Discount of the Sale",
         "left":"",
         "Exchange":"₹2,000",
@@ -102,13 +116,16 @@
         "os":"Linux",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":43
+        "dis":43,
+        "bank_price":"₹11,799",
+        "sound":40
     
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/j/l/x/-original-imahg2h8kfhgaerg.jpeg?q=70",
         "name":"Foxsky 80 cm (32 inch) HD Ready LED Smart Android TV",
          "rating":"10291 Rating & 2280 Reviews",
+         "rating_only":"10291",
         "rating_star":4.1,
         "hd":"HD Ready | LED",
         "model":"Model ID: 32 FSELS PRO",
@@ -118,6 +135,7 @@
         "exact_price":6999,
         "total_Price":"22,499",
         "Offer":"68% Off",
+        "off":68,
         "discount":"",
         "left":"",
         "Exchange":"₹2,000",
@@ -130,13 +148,16 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":68
+        "dis":68,
+        "bank_price":"₹6,999",
+        "sound":30
         
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/m/5/v/-original-imahg2h8zhm94yny.jpeg?q=70",
         "name":"Foxsky 102 cm (40 inch) Full HD LED Smart Android TV",
          "rating":"10,291 Rating & 2,280 Reviews",
+         "rating_only":"10,291",
         "rating_star":4.1,
         "hd":"Full HD | LED",
         "model":"Model ID: 40FSFHS",
@@ -146,6 +167,7 @@
         "exact_price":11499,
         "total_Price":"38,499",
         "Offer":"70% Off", 
+        "off":70,
         "deal":"Saver Deal",
         "discount":"",
         "left":"",
@@ -158,12 +180,15 @@
         "os":"Android",
         "ratingSection":"3★ & above",
         "invoice":"not available",
-        "dis":70
+        "dis":70,
+        "bank_price":"₹11,499",
+        "sound":40
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/8/q/d/-original-imah6c7ajdug9gz4.jpeg?q=70",
         "name":"Acer I PRO Series 108 cm (43 inch) Full HD LED Smart Google TV with Android 14 (Black) | 16GB Storage ...",
         "rating":"11,081 Rating & 1,015 Reviews",
+        "rating_only":"11,081",
         "rating_star":3.9,
         "hd":"Full HD | LED",
         "model":"Model ID: AR43FDIGU2841AT",
@@ -173,6 +198,7 @@
         "exact_price":16599,
         "total_Price":"43,999",
         "Offer":"62% Off",
+        "off":62,
         "deal":"", 
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -185,12 +211,15 @@
         "os":"Android",
         "ratingSection":"3★ & above",
         "invoice":"available",
-        "dis":62
+        "dis":62,
+        "bank_price":"₹10,499",
+        "sound":30
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/j/y/k/-original-imahbgz4ejypz276.jpeg?q=70",
         "name":"Thomson FA Series 108 cm (43 inch) Full HD LED Smart Android TV with Dolby Digital Plus & Android 11",
         "rating":"1,27,205 Rating & 21,857 Reviews",
+        "rating_only":"1,27,205",
         "rating_star":4.3,
         "hd":"Full HD | LED",
         "model":"Model ID: 43RT1055",
@@ -200,6 +229,7 @@
         "exact_price":14749,
         "total_Price":"29,999",
         "Offer":"50% Off",
+        "off":50,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -212,12 +242,16 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":50
+        "dis":50,
+        "bank_price":"₹13,499",
+        "sound":40
+
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/e/m/d/-original-imahfrcmufdgtkun.jpeg?q=70",
         "name":"InnoQ Spectra 102 cm (40 inch) Full HD LED Smart Android TV with 30W Boom Speakers | 1000+ Smart Apps ...",
         "rating":"9,561 Rating & 998 Reviews",
+        "rating_only":"9,561",
         "rating_star":4.1,
         "hd":"Full HD | LED",
         "model":"Model ID: 40S-SPECTRA-V2",
@@ -227,6 +261,7 @@
         "exact_price":10949,
         "total_Price":"34,990",
         "Offer":"68% Off",
+        "off":68,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -239,13 +274,16 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"not available",
-        "dis":68
+        "dis":68,
+        "bank_price":"₹10,499",
+        "sound":30
 
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/w/a/q/-original-imah3yh6bmjtghny.jpeg?q=70",
         "name":"Samsung Crystal 4K Vivid 108 cm (43 inch) Ultra HD (4K) LED Smart Tizen TV with 4K Upscaling | Purcolo...",
         "rating":"18,833 Rating & 1,306 Reviews",
+        "rating_only":"18,833",
         "rating_star":4.3,
         "hd":"Ultra HD (4K) | LED",
         "model":"Model ID: UA4DUE70BKLXL",
@@ -255,6 +293,7 @@
         "exact_price":23990,
         "total_Price":"44,900",
         "Offer":"46% Off",
+        "off":46,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -267,12 +306,15 @@
         "os":"Tizen",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":46
+        "dis":46,
+        "bank_price":"₹20,999",
+        "sound":40
     },
     {  
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/f/c/i/-original-imahexc2x46aaf4d.jpeg?q=70",
         "name":"acerpure Aspire Neo 80 cm (32 inch) HD Ready LED Smart Google TV 2025 Edition with GTV 5.0 | Ref+ with...",
         "rating":"",
+        "rating_only":"",
         "rating_star":"",
         "hd":"HD Ready | LED",
         "model":"Model ID: AP32HG41BASN5",
@@ -282,6 +324,7 @@
         "exact_price":10299,
         "total_Price":"25,990",
         "Offer":"60% Off",
+        "off":60,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -295,13 +338,16 @@
         "os":"Google Tv",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":60
+        "dis":60,
+        "bank_price":"₹9,249",
+        "sound":30
 
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/1/m/a/-original-imahehshwxqfhmer.jpeg?q=70",
         "name":"Coocaa 108 cm (43 inch) QLED Full HD Smart Google TV 2025 Edition with Dolby Audio| Narrow Frame Desig...",
         "rating":"77 Rating & 12 Reviews",
+        "rating_only":"77",
         "rating_star":4.2,
         "hd":"Full HD | QLED",
         "model":"Model ID: 43Q74",
@@ -311,6 +357,7 @@
         "exact_price":15699,
         "total_Price":"29,999",
         "Offer":"47% Off",
+        "off":47,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -323,12 +370,15 @@
         "os":"Google Tv",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":47
+        "dis":47,
+        "bank_price":"₹14,249",
+        "sound":40
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/m/5/v/-original-imahg2h8zhm94yny.jpeg?q=70",
         "name":"Foxsky 109 cm (43 inch) Full HD LED Smart Android TV",
         "rating":"10,291 Rating & 1,306 Reviews",
+        "rating_only":"10,291",
         "rating_star":4.1,
         "hd":"Full HD | LED",
         "model":"Model ID: 43FS-Vs/43FSFHs",
@@ -338,6 +388,7 @@
         "exact_price":11499,
         "total_Price":"41,499",
         "Offer":"72% Off",
+        "off":72,
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -350,12 +401,15 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":72
+        "dis":72,
+        "bank_price":"₹11,499",
+        "sound":30
     },
     {
         "img":"https://rukminim2.flixcart.com/image/312/312/xif0q/television/k/c/t/-original-imahdh9gsqyzwdz4.jpeg?q=70",
         "name":"TOSHIBA 108 cm (43 inch) Full HD LED Smart Android TV with DTS X",
         "rating":"8,810 Rating & 1,227 Reviews",
+        "rating_only":"8,810",
         "rating_star":4.3,
         "hd":"Full HD | LED",
         "model":"Model ID: 43V35MP",
@@ -365,6 +419,7 @@
         "exact_price":18399,
         "total_Price":"11,499",
         "Offer":"72% Off",
+        "off":"72",
         "deal":"",
         "discount":"Top Discount of the Sale",
         "left":"",
@@ -377,7 +432,9 @@
         "os":"Android",
         "ratingSection":"4★ & above",
         "invoice":"available",
-        "dis":20
+        "dis":20,
+        "bank_price":"₹16,896",
+        "sound":30
         
     }
 ]
