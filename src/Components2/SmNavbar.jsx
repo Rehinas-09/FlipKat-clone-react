@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
-function SmNavbar() {
+function SmNavbar({onClick}) {
   return (
     <div className=' sm-Container'>
-      <div className='sm-container-sub sm-Container'> */}
+      <div className='sm-container-sub sm-Container'>
          <div className='sm-section1'>
           <div className='sm-section1Sub'>
             <a href='/' className='smflipArrow'>
@@ -29,7 +29,7 @@ function SmNavbar() {
         <div className='sm-section2'>
           <div className='sm-section2-sub'>
             <div className='sm-section2-mid'>
-              <div className='sm-sort'>
+              <div className='sm-sort' onClick={onClick}>
                 <div className='sm-sort-section'>
                   <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path></svg>
                   <div className='sm-sort-title'>Sort</div>

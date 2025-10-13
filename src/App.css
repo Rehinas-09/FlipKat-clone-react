@@ -20,6 +20,7 @@
   justify-content: center;
   margin: 0 16px;
 }
+
 .sub{
   max-width: 1600px;
   margin-top: 8px; 
@@ -46,7 +47,7 @@
   .main-subSection{ 
     margin: 0;
   } 
-  .sub{
+  .sub{ 
     margin-top: 0;
   }
 } 

@@ -1,30 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './style.css'
-function Filter({ 
-     price,
-     setPrice,
-     assured,
-     setAssured,
-     selectedBrand,
-     changeBrand,
-      selectedScreen,
-      onScreenChange,
-    resolution,
-     setResolution,
-     display,
-      setDisplay,
-      os,
-      setOs,
-      rating,
-     setRating,
-    invoice,
-     setInvoice,
-     discount,
-     setDiscount
-    }) {
+import { FilterContext } from './FilterContextProvider'
+function Filter(){
+       const{
+          price,
+          setPrice,
+            assured,
+           setAssured,
+        }=useContext(FilterContext)
+    //  selectedBrand,
+    //  changeBrand,
+    //   selectedScreen,
+    //   onScreenChange,
+    // resolution,
+    //  setResolution,
+    //  display,
+    //   setDisplay,
+    //   os,
+    //   setOs,
+    //   rating,
+    //  setRating,
+    // invoice,
+    //  setInvoice,
+    //  discount,
+    //  setDiscount
+
+
+  
         // const [brandSearch,setBarndSearch]=useState("")
         // const [ratingStar,setRatingStar]=useState([])
-        const [data,setData]=useState([])
+        // const [data,setData]=useState([])
     const handleMinChange = (e) => { 
         const newMin = Number(e.target.value) 
         console.log(newMin) 
@@ -35,93 +40,93 @@ function Filter({
          console.log(newMax)
         setPrice({ min: price.min, max: newMax })
     }
-    const assuredChange=(newValue)=>{ 
+     const assuredChange=(newValue)=>{ 
         setAssured(newValue)
       
-    }
-    const handleBrandChange=(brand,checked)=>{
-        if(checked){ 
-            changeBrand([...selectedBrand,brand])
-        }
-        else{
-            changeBrand(selectedBrand.filter((b)=>b!==brand))
-        }
-    } 
+     }
+    // const handleBrandChange=(brand,checked)=>{
+    //     if(checked){ 
+    //         changeBrand([...selectedBrand,brand])
+    //     }
+    //     else{
+    //         changeBrand(selectedBrand.filter((b)=>b!==brand))
+    //     }
+    // } 
     
-    const handleResolution=(data,checked)=>{
-        if(checked){
-           setResolution([...resolution,data])
-        }
-        else{ 
-            setResolution(resolution.filter((r)=>r!==data))
-        }
-    }  
-     const screenSizeRange=[
-         {label:"40 - 43 inch",min:40,max:43},
-         {label:"28 - 32 inch",min:28,max:32} //
-     ] 
-     const ratingRange=[
-       {label:"3★ & above",min:3,max:5},
-       {label:"4★ & above",min:4,max:5}
-     ]
-     const discountRange=[
-        {label:"40% or more",min:40,max:100},
-        {label:"30% or more",min:30,max:100},
-        {label:"20% or more",min:20,max:100 }
-    ]
+    // const handleResolution=(data,checked)=>{
+    //     if(checked){
+    //        setResolution([...resolution,data])
+    //     }
+    //     else{ 
+    //         setResolution(resolution.filter((r)=>r!==data))
+    //     }
+    // }  
+    //  const screenSizeRange=[
+    //      {label:"40 - 43 inch",min:40,max:43},
+    //      {label:"28 - 32 inch",min:28,max:32} //
+    //  ] 
+    //  const ratingRange=[
+    //    {label:"3★ & above",min:3,max:5},
+    //    {label:"4★ & above",min:4,max:5}
+    //  ]
+    //  const discountRange=[
+    //     {label:"40% or more",min:40,max:100},
+    //     {label:"30% or more",min:30,max:100},
+    //     {label:"20% or more",min:20,max:100 }
+    // ]
      
-     const handleScreenSize=(range,checked)=>{
-         if(checked){
-             onScreenChange([...selectedScreen,range])
-         }
-           else{
-             onScreenChange(
-                 selectedScreen.filter((r)=>r.label!==range.label)
-             )
-         } 
-     }
-     const handleRating=(rate,checked)=>{
-      if(checked){
-        setRating([...rating,rate])
-      }
-      else{
-        const updateRating=rating.filter((r)=>r.label!==rate.label)
-        setRating(updateRating)
-      }//
-     }
-     const handleDiscountChange=(dis,checked)=>{
-         if(checked){
-             setDiscount([...discount,dis])
-         }//
-         else{
-             setDiscount(discount.filter((d) => d.label !== dis.label));
-        }
-     }
-    const handleDisplay=(data,checked)=>{
-        if(checked){
-          setDisplay([...display,data])
-        }
-        else{
-            setDisplay(display.filter((d)=>d!==data))
-        }
-    }
-       const handleOs=(data,checked)=>{
-           if(checked){
-              setOs([...os,data])
-           }
-          else{
-              setOs(os.filter((d)=>d!==data))
-          }
-       } 
-      useEffect(()=>{   
-        fetch("TvData.json")  
-        .then(res=>res.json()) 
-        .then(data=>setData(data)) 
-      },[]) 
-        const uniqueBrand=[...new Set(data.map((item)=>item.brand))]
-       const resolutionUnique=[...new Set(data.map((res)=>res.resolution))]
-         const displayUnique=[...new Set(data.map((item)=>item.display))]
-         const osUnique=[...new Set(data.map((item)=>item.os))]
+    //  const handleScreenSize=(range,checked)=>{
+    //      if(checked){
+    //          onScreenChange([...selectedScreen,range])
+    //      }
+    //        else{
+    //          onScreenChange(
+    //              selectedScreen.filter((r)=>r.label!==range.label)
+    //          )
+    //      } 
+    //  }
+    //  const handleRating=(rate,checked)=>{
+    //   if(checked){
+    //     setRating([...rating,rate])
+    //   }
+    //   else{
+    //     const updateRating=rating.filter((r)=>r.label!==rate.label)
+    //     setRating(updateRating)
+    //   }//
+    //  }
+    //  const handleDiscountChange=(dis,checked)=>{
+    //      if(checked){
+    //          setDiscount([...discount,dis])
+    //      }//
+    //      else{
+    //          setDiscount(discount.filter((d) => d.label !== dis.label));
+    //     }
+    //  }
+    // const handleDisplay=(data,checked)=>{
+    //     if(checked){
+    //       setDisplay([...display,data])
+    //     }
+    //     else{
+    //         setDisplay(display.filter((d)=>d!==data))
+    //     }
+    // }
+    //    const handleOs=(data,checked)=>{
+    //        if(checked){
+    //           setOs([...os,data])
+    //        }
+    //       else{
+    //           setOs(os.filter((d)=>d!==data))
+    //       }
+    //    } 
+    //   useEffect(()=>{   
+    //     fetch("TvData.json")  
+    //     .then(res=>res.json()) 
+    //     .then(data=>setData(data)) 
+    //   },[]) 
+    //     const uniqueBrand=[...new Set(data.map((item)=>item.brand))]
+    //    const resolutionUnique=[...new Set(data.map((res)=>res.resolution))]
+    //      const displayUnique=[...new Set(data.map((item)=>item.display))]
+    //      const osUnique=[...new Set(data.map((item)=>item.os))]
         // const uniqueRating=[...new Set(data.map((item)=>item.ratingSection))]
         // console.log(displayUnique)
     return (
@@ -218,8 +223,9 @@ function Filter({
                                 </select>
                             </div>
                         </div>
+                        
                     </div>
-                    {/* assured section eee*/}
+                     {/* assured section */}
                     <div className="assured-section"> 
                         <div className="labelAssured"> 
                             <input type='checkbox' checked={assured} onChange={(e)=>assuredChange(e.target.checked)} ></input>
@@ -231,8 +237,11 @@ function Filter({
                             <span className='QmarkSpan'>?</span>
                         </div>
                     </div>
+                       </div>
+        
+                   
                     {/* brand Section */}
-                  <div className='brand-section'>
+                  {/* <div className='brand-section'>
                         <div className='brandSone'>
                            <div className='brandName'>
                             Brand 
@@ -265,9 +274,9 @@ function Filter({
                                    
                            </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* screesize section */}
-                   <div className='screensize' >
+                   {/* <div className='screensize' >
                         <div className='brandSone'>
                             <div className='brandName'>
                                 Screen Size
@@ -292,10 +301,10 @@ function Filter({
                                     
                         </div>
 
-                    </div>
+                    </div> */}
                     {/* resolution section */}
                     
-                     <div className='screensize'>
+                     {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                 Resolution
@@ -320,9 +329,9 @@ function Filter({
                                     
                         </div>
 
-                    </div> 
+                    </div>  */}
                     {/* display section */}
-                      <div className='screensize'>
+                      {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                 DISPLAY TECHNOLOGY
@@ -345,11 +354,11 @@ function Filter({
                         
                             </div>
                                     
-                        </div>
+                        </div> */}
 
-                    </div> 
+                    {/* </div>  */}
                     {/* os section */}
-                      <div className='screensize'>
+                      {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                 OPERATING SYSTEM
@@ -374,8 +383,8 @@ function Filter({
                                     
                         </div>
 
-                    </div> 
-                     <div className='screensize'>
+                    </div>  */}
+                     {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                CUSTOMER RATING 
@@ -403,7 +412,7 @@ function Filter({
 
                     </div> 
                     {/* gst invoice section */}
-                    <div className='screensize'>
+                    {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                GST INVOICE AVAILABLE 
@@ -422,9 +431,9 @@ function Filter({
                                     </div>  
                             </div>            
                         </div>
-                    </div> 
+                    </div>  */}
                     {/* discount section */}
-                    <div className='screensize'>
+                    {/* <div className='screensize'>
                         <div className='brandSone'>
                             <div className='brandName'>
                                 DISCOUNT
@@ -449,8 +458,8 @@ function Filter({
                                     
                         </div>
 
-                    </div>  
-                </div>
+                    </div>   */}
+                {/* </div>  */}
                 <div className="filterColumnTwo">
                     <a className="filterAtag">
                     
@@ -469,5 +478,6 @@ function Filter({
         </div>
     )
 }
+
 
 export default Filter

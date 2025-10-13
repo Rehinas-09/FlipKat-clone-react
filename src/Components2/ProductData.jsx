@@ -1,8 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import {Star} from "lucide-react"
-function ProductData({products}) {
+import Sort from './Sort'
+import { useSort } from './Context'
+function ProductData({products,open,onClose}) {
  const [screen,setScreen]=useState(window.innerWidth)
+ const [data,setData]=useState([])
+ const {sort,setSort}=useSort()
+ let sortedProduct=[...products]
+ 
+if(sort==="PriceLowHigh"){
+     sortedProduct.sort((a,b)=>a.exact_price-b.exact_price)
+} 
+else if(sort==="PriceHighLow"){
+  sortedProduct.sort((a,b)=>b.exact_price-a.exact_price)
+}
+else if(sort==="Newest"){
+  sortedProduct.sort((a,b)=>a.id-b.id)
+}
+else if(sort==="Discount"){
+  sortedProduct.sort((a,b)=>b.dis-a.dis)
+}
  useEffect(()=>{
   const handleResize=()=>{
        setScreen(window.innerWidth<=1200)
@@ -10,9 +28,15 @@ function ProductData({products}) {
   window.addEventListener("resize",handleResize)
   return()=>window.removeEventListener('resize',handleResize)
  })
+ useEffect(()=>{
+     fetch("brandc.json") 
+     .then(res=>res.json())
+     .then(data=>setData(data))
+     .catch(err=>console.log(err))
+ })
   return (
    <>
-  {products.map((value, index) => (
+  {sortedProduct.map((value, index) => (  
     <div className="productDataContainer" key={index}>
       <div className="productDataContainerSub">
         <a className="productDataContainerA">
@@ -249,23 +273,85 @@ function ProductData({products}) {
                  <div className='topSaleshead'>
                   <div className='topSalesheadsub'>
                     <div className='smSalesTop'>
-
+                       <span className='smHead'>
+                        Which Operating System are you looking for?
+                       </span>
                     </div>
-                    <div className='smSalesArrow'></div>
                   </div>
                  </div>
-                 <div></div>
+                 <div className='opratingsystem'>
+                  <div className='osSub'>
+                    <div className='osMid'>
+                      {
+                        data.map((value,index)=>(
+                          <div className='singleossystem' key={index}>
+                              <div className='singleossystemsub'>
+                                <div className='osimage'>
+                                  <img className="osimageimg" src={value.img}/>
+                                 </div>
+                                 <div className='osname'>
+                                  <span>{value.name}</span>
+                                  </div> 
+                                </div>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                 </div>
               </div>
              </div>
           )}
+          {
+            screen&&(
+              <>
+               {index+1===8&&(
+                <div className='xiaomiadd'>
+                   <a>
+                     <div className='xiaomiaddsub'>
+                      <img src='https://rukminim1.flixcart.com/fk-p-image/1206/536/cf-chitrakaar-prod/5f93a43e5b608ae418af6d6bcd8cefd3.jpeg?q=60' className='xiaomiimg'/>
+                     </div>
+                   </a>
+                </div>
+               )}
+              </>
+            )
+          }
           </>
         )
       }
     </div>
   ))}
+  <div className='tvSortingsection' >
+      <div className='tvSortingSub'>
+        <div className='tvSortHead'>
+            Sort
+        </div>
+        <div className="sortingContent">
+            <div className='sortingElements'>
+              {["Relevence","Popularity","PriceLowHigh","PriceHighLow","Newest","Discount"].map(opt=>(
+                <>
+                  <div className='sortingElementp' key={opt}>
+                    <div className='sortinge'>
+                    {opt}
+                    </div>
+                    <div className='eleradio'>
+                       <input type='radio'
+                       value={opt}
+                       checked={sort===opt}
+                       onChange={()=>setSort(opt)}/>
+                    </div>
+                </div>
+              
+                </>
+              ))}
+                
+            </div>
+        </div>
+      </div>
+    </div>
 </>
 
   )
 }
-
 export default ProductData
