@@ -1873,6 +1873,7 @@ font-family: "inter-Regular";
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    background-color: rgb(255,255,255);
 }
 .sortingElements{
    display: flex;
@@ -2122,6 +2123,197 @@ font-family: "inter-Regular";
     resize: none;
     height: 40px;
     box-shadow: none;
-    border: none;
+   border-top:1px solid rgba(233,233,233,1.00); 
+   border-bottom: 1px solid rgba(233,233,233,1.00);
+   border-left: none;
+   border-right: none;
+ }
+ .brand-check{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: 528px;
+    width: 683px;
+
+ }
+ .brand-checksub{
+     height: 48px;
+     width: 682.667px;
+     display: flex;
+     flex: 1;
+     align-items: center;
+     padding-top: 12px;
+     padding-bottom: 12px;
+     padding-right: 19px;
+     padding-left: 19px;
+    
+
+ }
+   .filterClearSection{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: rgb(255,255,255);
+    height: 52px;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+ }
+ .fcsub{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+ }
+ .fcmid{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    opacity: 1;
+    height: 52px;
+    font-size: 16px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background-color: rgb(255,255,255);
+
+ }
+ .fcarrow{
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 42px;
+    max-height: 16px;
+    line-height: 30px;
+    position: relative;
+ }
+ .fchead{
+    color: #212121;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 12px;
+    text-align: left;
+}
+.fcheadsub{
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.fcclear{
+    color: #fff;
+    position: absolute;
+    top:10px;
+    text-align: center;
+    width: 75px;
+    right: 8px;
+    line-height: 12px;
+    display: inline-block;
+}
+.fcspan{
+    color: rgb(0,0,0);
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    width: 75px;
+    right: 8px;
+    font-size: 13px;
+    line-height: 12px;
+    display: inline-block; 
+
+}
+.apply-head{
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+}
+.apply-headsub{
+    background-color:rgb(255,255,255) ;
+    position: relative;
+    opacity: 1;
+    height: 56px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    align-items: stretch;
+}
+.apply-headmid{
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 16px;
+}
+.applyHead{
+ display: flex;
+ flex-direction: column;
+ flex: 1 1 0%;
+}
+ .productCount{
+    line-height: 19px;
+    font-size: 16px;
+    color: rgb(0,0,0);
+    font-family: "roboto-medium";
+ }
+ .productFound{
+    color: rgb(135,135,135);
+    font-family: "roboto-medium";
+    font-size: 12px;
+    overflow-wrap: normal;
+    white-space: nowrap;
+    font-weight: 400;
+ }
+ .applyButton{
+    min-height: 40px;
+    background-color: rgb(255,88,0);
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    border-radius: 2px;
+ }
+ .applyButtonName{
+    font-family: "roboto-Medium";
+    font-size: 14px;
+    color: rgb(255,255,255);
+    font-size: 14px;
+    color: rgb(255,255,255);
+
+ }
+ .overlay{
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9;
+ }
+ .sortPanel{
+    position: fixed;
+    bottom: -100%;
+    left:0;
+    width: 100%;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.2);
+    transition: bottom 0.3s ease;
+    z-index:10;
+    padding: 20px;
+ }
+ .sortPanel .show{
+    bottom: 0;
  }
 }

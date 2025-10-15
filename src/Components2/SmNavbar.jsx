@@ -1,6 +1,11 @@
 import React from 'react'
 import './style.css'
+import {useNavigate} from 'react-router-dom'
 function SmNavbar({onClick}) {
+    const navigate=useNavigate()
+    const handleClick=()=>{
+      navigate("/filter")
+    }
   return (
     <div className=' sm-Container'>
       <div className='sm-container-sub sm-Container'>
@@ -36,7 +41,7 @@ function SmNavbar({onClick}) {
                 </div>
               </div>
               <div className='sm-filter-line'></div>
-              <div className='sm-filter-section'>
+              <div className='sm-filter-section' onClick={handleClick}>
                 <div className='sm-filter-sectionsub'>
                   <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M148 172H40M216 172h-28"></path><circle cx="168" cy="172" r="20" fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M84 84H40M216 84h-92"></path><circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle></svg>
                   <div className='sm-sort-title'>Filter</div>

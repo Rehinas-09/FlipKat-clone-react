@@ -14,9 +14,9 @@ if(sort==="PriceLowHigh"){
 } 
 else if(sort==="PriceHighLow"){
   sortedProduct.sort((a,b)=>b.exact_price-a.exact_price)
-}
+} 
 else if(sort==="Newest"){
-  sortedProduct.sort((a,b)=>a.id-b.id)
+  sortedProduct.sort((a,b)=>a.id-b.id) 
 }
 else if(sort==="Discount"){
   sortedProduct.sort((a,b)=>b.dis-a.dis)
@@ -31,7 +31,7 @@ else if(sort==="Discount"){
  useEffect(()=>{
      fetch("brandc.json") 
      .then(res=>res.json())
-     .then(data=>setData(data))
+     .then(data=>setData(data)) 
      .catch(err=>console.log(err))
  })
   return (
@@ -322,34 +322,7 @@ else if(sort==="Discount"){
       }
     </div>
   ))}
-  <div className='tvSortingsection' >
-      <div className='tvSortingSub'>
-        <div className='tvSortHead'>
-            Sort
-        </div>
-        <div className="sortingContent">
-            <div className='sortingElements'>
-              {["Relevence","Popularity","PriceLowHigh","PriceHighLow","Newest","Discount"].map(opt=>(
-                <>
-                  <div className='sortingElementp' key={opt}>
-                    <div className='sortinge'>
-                    {opt}
-                    </div>
-                    <div className='eleradio'>
-                       <input type='radio'
-                       value={opt}
-                       checked={sort===opt}
-                       onChange={()=>setSort(opt)}/>
-                    </div>
-                </div>
-              
-                </>
-              ))}
-                
-            </div>
-        </div>
-      </div>
-    </div>
+
 </>
 
   )
