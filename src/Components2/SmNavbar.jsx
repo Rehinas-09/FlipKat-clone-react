@@ -1,11 +1,12 @@
 import React from 'react'
 import './style.css'
 import {useNavigate} from 'react-router-dom'
-function SmNavbar({onClick}) {
+import { AsteriskSquare } from 'lucide-react'
+function SmNavbar({onClick,onOpen}) {
     const navigate=useNavigate()
     const handleClick=()=>{
       navigate("/filter")
-    }
+    } 
   return (
     <div className=' sm-Container'>
       <div className='sm-container-sub sm-Container'>
@@ -34,7 +35,7 @@ function SmNavbar({onClick}) {
         <div className='sm-section2'>
           <div className='sm-section2-sub'>
             <div className='sm-section2-mid'>
-              <div className='sm-sort' onClick={onClick}>
+              <div className='sm-sort' onClick={onOpen}>
                 <div className='sm-sort-section'>
                   <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path></svg>
                   <div className='sm-sort-title'>Sort</div>
@@ -57,7 +58,49 @@ function SmNavbar({onClick}) {
                   <div className='smsectionboxesmid'>
                 <div className='smsectionboxessub'>
                   <div className='smboxsize'>
-                    
+                    <div className='singleBoxes'>
+                      <div className='singleboxImage'>
+                         <img className='sbi' src='https://rukminim1.flixcart.com/www/64/64/promos/03/10/2025/fab7ebe1-ff85-4a7d-92d9-6219b369e69d.jpg?q=60'/>
+                      </div>
+                      <div className='singleboxdes'>
+                         <span className='singleboxSpan'>Top Sale <br></br>Discount</span>
+                      </div>
+                    </div>
+                    <div className='singleBoxes box-one'>
+                      <div className='singleboxImage'>
+                        <img className='sbi' src="https://rukminim1.flixcart.com/www/64/64/promos/21/03/2025/e87c76fe-6dea-4cdb-8453-e53612372d4d.jpg?q=60"></img>
+                       
+                      </div>
+                      <div className='singleboxdes'>
+                        <span className='singleboxSpan'>QLED</span>
+                      </div>
+
+                    </div>
+                    <div className='singleBoxes box-two'>
+                      <div className='singleboxImage'>
+                        <img className='sbi' src='https://rukminim1.flixcart.com/www/64/64/promos/21/03/2025/a29f47ff-70b4-491d-a1d6-5769632220b9.jpg?q=60'/>
+                      </div>
+                      <div className='singleboxdes'>
+                        <span className='singleboxSpan'>OLED</span>
+                      </div>
+                       
+                    </div>
+                    <div className='singleBoxes box-three'>
+                      <div className='singleboxImage'>
+                        <img className='sbi' src='https://rukminim1.flixcart.com/www/64/64/promos/21/03/2025/7413d410-6b00-421a-9120-00491d340e26.jpg?q=60'></img>
+                      </div>
+                      <div className='singleboxdes'>
+                      <span className='singleboxSpan'>Ultra <br></br> HD</span>
+                      </div>
+                    </div>
+                    <div className='singleBoxes box-four'>
+                      <div className='singleboxImage'>
+                          <img className='sbi' src='https://rukminim1.flixcart.com/www/64/64/promos/25/03/2025/0472f872-168e-423a-94f2-8e42b0b240b0.jpg?q=60'></img>
+                      </div>
+                      <div className='singleboxdes'>
+                        <span className='singleboxSpan'>Google <br></br> TV</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                   </div>

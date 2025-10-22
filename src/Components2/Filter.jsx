@@ -28,6 +28,29 @@ function Filter(){
            discount,
            setDiscount
         }=useContext(FilterContext)
+    const handleClearAll=()=>{
+        setPrice([])
+        setAssured(false)
+        setBrand([])
+        setScreen([])
+        setResolution([])
+        setOs([])
+        setDisplay([])
+        setRating([])
+        setInvoice([])
+        setDiscount([])
+
+    }
+    const isFilterSelected=price.length>0||
+                           assured==true||
+                           brand.length>0||
+                           screen.length>0|| 
+                           resolution.legth>0||
+                           os.length>0||
+                           display.length>0||
+                           rating.length>0||
+                           invoice.length>0||
+                           discount.length>0
     const handleMinChange = (e) => { 
         const newMin = Number(e.target.value) 
         console.log(newMin) 
@@ -39,6 +62,7 @@ function Filter(){
         setPrice({ min: price.min, max: newMax })
     }
      const assuredChange=(newValue)=>{ 
+   
         setAssured(newValue)
       
      }
@@ -126,6 +150,18 @@ function Filter(){
                             <div className='filterHead'>
                                 <span>Filters</span>
                             </div>
+                            {
+                                isFilterSelected&&(
+                                      <div className='filterclearall' onClick={handleClearAll}>
+                                       Clear All
+                                      </div>
+                                )
+                            } 
+                        </div>
+                        <div className='itemClearSection'>
+                           <div className='itemClearSectionSub'>
+                            
+                           </div>
                         </div>
                     </div>
                     <div className='filterCategories'>
@@ -145,7 +181,7 @@ function Filter(){
                                     <a className='filterTeleA'>
                                         Televisions
                                     </a>
-                                </span>
+                                </span> 
                             </div>
                         </div>
                     </div>
@@ -233,8 +269,18 @@ function Filter(){
                            <div className='brandName'>
                             Brand 
                           </div>
+                
                           <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35"></path></svg>
                         </div>  
+                        {
+                            (brand.length>0)&&(
+                                   <div className='brandClearAll'>
+                                 <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setBrand([])}>Clear all</div>
+                                 </div>
+                            )
+                        }
+                       
                        
                        
                         <div className='brandStwo'>
@@ -271,6 +317,14 @@ function Filter(){
                             </div>
                             <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                        {
+                            (screen.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setScreen([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                {
@@ -300,6 +354,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                        {
+                            (resolution.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setResolution([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                {
@@ -310,7 +372,7 @@ function Filter(){
                                             <input type="checkbox" value={data} checked={resolution.includes(data)} onChange={(e)=>handleResolution(data,e.target.checked)}></input>
                                             <div className='screenSizeRange'>{data}</div> 
                                             </div> 
-                                        </div>
+                                        </div> 
                                     </div>
                                 ))
                                } 
@@ -328,6 +390,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                        {
+                            (display.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setDisplay([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                {
@@ -355,6 +425,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                        {
+                            (os.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setOs([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                {
@@ -382,6 +460,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                         {
+                            (rating.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setRating([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                { 
@@ -411,6 +497,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                         {
+                            (invoice==true)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setInvoice(false)}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             <div className="brandStwoSub">
                                     <div className='screen_size'> 
@@ -433,6 +527,14 @@ function Filter(){
                             </div>
                              <svg  width="6" height="11" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"  className="ukzDZP rZzKt4 svgBrand" ><path className='svgPath' d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="SV+H35"></path><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787" class="SV+H35" ></path></svg>
                         </div>
+                         {
+                            (discount.length>0)&&(
+                             <div className='brandClearAll'>
+                                  <div className="clearMark">x</div>
+                                  <div className="clearAllb" onClick={()=>setDiscount([])}>Clear all</div>
+                            </div>
+                            )
+                        }
                         <div className='barndStwo'>
                             {
                                 discountRange.map((value,index)=>(

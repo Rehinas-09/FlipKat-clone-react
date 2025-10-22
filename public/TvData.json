@@ -179,7 +179,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"3★ & above",
-        "invoice":"not available",
+        "invoice":false,
         "dis":70,
         "bank_price":"₹11,499",
         "sound":40
@@ -210,7 +210,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"3★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":62,
         "bank_price":"₹10,499",
         "sound":30
@@ -241,7 +241,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":50,
         "bank_price":"₹13,499",
         "sound":40
@@ -273,7 +273,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"4★ & above",
-        "invoice":"not available",
+        "invoice":false,
         "dis":68,
         "bank_price":"₹10,499",
         "sound":30
@@ -305,7 +305,7 @@
         "display":"LED",
         "os":"Tizen",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":46,
         "bank_price":"₹20,999",
         "sound":40
@@ -337,7 +337,7 @@
         "display":"LED",
         "os":"Google Tv",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":60,
         "bank_price":"₹9,249",
         "sound":30
@@ -369,7 +369,7 @@
         "display":"QLED",
         "os":"Google Tv",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":47,
         "bank_price":"₹14,249",
         "sound":40
@@ -400,7 +400,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":false,
         "dis":72,
         "bank_price":"₹11,499",
         "sound":30
@@ -431,7 +431,7 @@
         "display":"LED",
         "os":"Android",
         "ratingSection":"4★ & above",
-        "invoice":"available",
+        "invoice":true,
         "dis":20,
         "bank_price":"₹16,896",
         "sound":30

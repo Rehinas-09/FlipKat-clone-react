@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './style.css'
 import { FilterContext } from './FilterContextProvider'
 import { useNavigate } from 'react-router-dom'
+import ClearFilter from './ClearFilter'
 function FilterSm() {
   const {
     price,
@@ -383,9 +384,12 @@ function FilterSm() {
                     Apply
                    </div>
               </div>
+            
             </div>
+
           </div>
         </div>
+   
       </div>
     </div>
   )

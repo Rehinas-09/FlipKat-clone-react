@@ -10,25 +10,22 @@ import SmNavbar from './Components2/SmNavbar'
 import Smimage from './Components2/Smimage'
 import { FilterContext } from './Components2/FilterContextProvider'
 import SortingSection from './Components2/SortingSection'
+import SmSort from './Components2/SmSort'
+import ClearFilter from './Components2/ClearFilter'
 
 function Parent2() {
   const { filterProduct } = useContext(FilterContext)
-
-  const [open,setOpen] = useState(false)
   const [width,setWidth] = useState(window.innerWidth)
-  const [showSort,setShowSort] = useState(false)
   const [sortElement,setSortElement]=useState("Relevence")
-  const [sortBy,setSortBy]=useState()
+  const [showSort,setShowSort]=useState(false)
+  const open=()=>setShowSort(true)
+  const close=()=>setShowSort(false)
   useEffect(()=>{
     const handleResize=()=>setWidth(window.innerWidth)
     window.addEventListener("resize",handleResize)
     return ()=>window.removeEventListener("resize",handleResize)
   },[])
 
-  const handleSortSection=(option)=>{
-    setSortBy(option)
-    setShowSort(false)
-  }
 
 
   let sortedProducts = [...filterProduct] 
@@ -41,18 +38,22 @@ function Parent2() {
   return (
     <div>
       {width <= 1024 ? (
-        <div>
-          <SmNavbar onSortClick={()=>setShowSort(true)}/>
-          {showSort && <div className='overlay' onClick={()=>setShowSort(false)}></div>}
-
+        <>
+        <div className='sm-parent-head'> 
+          {showSort&&<div className='overlay' onClick={close}></div>}
+          <div className={`productdim ${showSort?"dimmed":""}`}> 
+          <SmNavbar onOpen={open} />
+          
           <div className='sm-main-container'>
             <Smimage/>
-            <ProductData products={sortedProducts} open={open} onClose={()=>setOpen(false)} sortBy={sortBy}/>
+            <ProductData products={sortedProducts} />
           </div>
-          <div className={`sortPanel ${showSort ? "show" : ""}`}>
-            <SortingSection selectedSort={sortBy} onSelectSort={handleSortSection}/>
-          </div>
+         </div>
+            <SmSort sortElement={sortElement} setSortElement={setSortElement} show={showSort} onClose={close}/>
+
         </div>
+        
+        </>
       ) : (
         <div>
           <Navbar/>  

@@ -4,17 +4,17 @@ export const FilterContext=createContext()
 function FilterContextProvider({children}) {
     const [data,setData]=useState([])
     const [price,setPrice]=useState([])
-    const [assured,setAssured]=useState([])
+    const [assured,setAssured]=useState(false)
     const [brand,setBrand]=useState([])
     const [screen,setScreen]=useState([])
     const [resolution,setResolution]=useState([])
     const [display,setDisplay]=useState([])
     const [os,setOs]=useState([])
     const [rating,setRating]=useState([])
-    const [invoice,setInvoice]=useState(false)
+    const [invoice,setInvoice]=useState(false) 
     const [discount,setDiscount]=useState([])
     const [min,setMin]=useState([])
-    const [max,setMax]=useState([])
+  
 
     useEffect(()=>{
         fetch("TvData.json")
@@ -31,7 +31,7 @@ function FilterContextProvider({children}) {
         const filterPrice=price.length==0||price.some(
           (prange)=>item.exact_price>=prange.min&&item.exact_price<=prange.max
         )
-        const AssurecdCheck=!assured||item.assured===true;
+        const AssurecdCheck=!assured||item.assured===true
         const brandMatch=brand.length==0||brand.includes(item.brand)
       const screenMatch = screen.length === 0 || screen.some(
       (range) => item.inch >=range.min && item.inch <= range.max 
@@ -41,7 +41,7 @@ function FilterContextProvider({children}) {
        const osMatch=os.length===0||os.includes(item.os)
       const ratingMath=rating.length===0||rating.some(range=>item.rating_star>=range.min && item.rating_star<=range.max)
        const discountMatch=discount.length===0||discount.some((range)=>item.dis>=range.min&&item.dis<=range.max)
-      const invoiceMatch=invoice.length==0||item.invoice=="available"
+      const invoiceMatch=!invoice||item.invoice==true
       const minMatch=min.length==0||item.sort((a,b)=>a.exact_price-b.exact_price)
       return filterPrice&&AssurecdCheck&&brandMatch&&screenMatch&&resolutionMatch&&displayMatch&&osMatch&&ratingMath&&discountMatch&&invoiceMatch
     })
