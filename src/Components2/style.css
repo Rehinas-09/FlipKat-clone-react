@@ -1492,11 +1492,31 @@ font-family: "inter-Regular";
 
  } 
  .itemClearSectionSub{
-     cursor: pointer;
-    font-size: 12px;
-    background-color:#e0e0e0;
-    box-shadow: 0 2px 4px 0 hsla(0,0%,100);
- }
+  display: inline-flex;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #e0e0e0;
+  box-shadow: 2px 4px 0 hsla(0, 0%, 100%, 1);
+  border-radius: 3px;
+  margin: 2px 4px;
+  max-width: 200px;
+  text-align: center;
+  padding: 8px;
+  align-items: center;
+  transition: background-color 1s;
+}
+.clearX{
+    display: inline-block;
+}
+.filterItem{
+    margin-left: 8px;
+    max-width: 90%;
+}
+.filterItem:hover{
+    text-decoration: line-through;
+}
+
+ 
  @media screen and (max-width:1440px){
     .topSalebox{
        display: none;
@@ -2439,9 +2459,9 @@ font-family: "inter-Regular";
    opacity: 1;
  }
  .sm-parent-head{
-    position: relative;
+  position: relative;
     min-height: 100vh;
-    overflow: hidden;
+  overflow: hidden;
  }
  .productdim{
     position: relative;
@@ -2452,7 +2472,7 @@ font-family: "inter-Regular";
     filter: blur(1px);
  }
  .overlay{
-    position: fixed;
+   position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.45);
     backdrop-filter:blur(3px);
@@ -2492,19 +2512,20 @@ font-family: "inter-Regular";
     height: 32px;
  }
  .sbi{
-    width: 32px;
-    height: 32px;
+ width: 32px;
+ width: 32px;
  }
  .singleboxdes{
     display: flex;
     flex-direction: row;
 
  }
+ 
  .singleboxSpan{
   color: rgb(33,33,33);
   font-size: 12px;
   font-family: 'roboto-regular';
-  font-style: normal;
+  font-size: normal;
   line-height: 16px;
   white-space: inherit;
   word-wrap: break-word;
@@ -2520,6 +2541,154 @@ font-family: "inter-Regular";
 }
 .box-four{
     transform: translate(391px,0px);
+}
+.clearallsm-mainsection{
+    background-color: rgb(255,255,255);
+    transform: translate(0px,558px,0px);
+    position:fixed;
+    min-height: 797px;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex: 1 1 0%;
+}
+.filterMainSection{
+   background-color: rgb(255,255,255);
+   transform: translate3d(0px,558px,0px);
+   position: fixed;
+   max-height: 797px;
+   overflow-y: hidden;
+   width: 100%;
+   height: 100%;
+   min-height: 200px;
+   display: flex;
+   flex: 1 1 0%;
+   max-height: 797px;    
+}
+.filterMainSub{
+    display:flex ;
+    flex-direction: column;
+    flex-shrink: 1;
+    transform: translateZ(0px);
+    padding-top: 52px;
+    padding-bottom: 0px;
+
+}
+.filterContent{
+    display: flex;
+    flex-direction: column;
+    height: 187px;
+    width: 1024px;
+    transform: translate(0px,0px);
+    
+}
+.clearinformation{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex:1 1 0%; 
+  padding:16px;
+  padding-top: 56px;
+  flex: 1;
+
+}
+.clearFil{
+    font-size: 16px;
+    color: rgba(33,33,33,1.00);
+    font-size: 'roboto-medium';
+}
+.clearfilgray{
+    display: flex;
+    flex-direction: row;
+    color: rgba(135,135,135,1.00);
+    font-size: 'roboto-regular';
+    font-size: 14px;
+    margin-top: 4px;
+    align-items: stretch;
+
+}
+.clearbox{
+    margin-top: 16px;
+    flex-direction: row;
+    display: flex;
+    align-items: stretch;
+    padding-left: 16px;
+    width: 1024px;
+    padding-right: 16px;
+}
+.cancelboxone{
+   display: flex;
+   flex: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 8px;
+  border: 1px solid rgba(240,240,240,1.00);
+  border-radius: 2px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0,00,1.00);
+  font-family: 'roboto-regular';
+  font-size: 14px;
+
+}
+.clearboxtwo{
+  display: flex;
+  flex:1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 8px;
+  border: 1px solid rgba(240,240,240,1.00);
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgba(40, 116, 240, 1.00);;
+  color: rgba(255,255,255,1.00);
+  font-family: 'roboto-regular';
+  font-size: 14px;
+  justify-content: center;
+
+}
+.filtercheckboxcontent{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.itemsection{
+   margin-left: 16px;
+    font-family: "roboto-regular";
+    font-size: 14px;
+    color: rgba(0,0,0,1.00);
+
+}
+.clearfilterinto{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 56px;
+    bottom: 4px;
+    background-color:rgb(255,255,255);
+    color: rgb(51,51,51);
+    font-size: 16px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    min-height: 52px;
+}
+.filtersvg{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    max-height: 16px;
+    line-height: 10px;
+    width: 42px;
+    position: relative;
 }
 
 }
@@ -2539,5 +2708,13 @@ font-family: "inter-Regular";
     .sm-add-image{
         width: 425px;
         height: 189px;
-    }   
+    } 
+    .xiaomiimg{
+        width: 425px;
+    } 
+   .xiaomiaddsub{
+ width:425px;
+ height: 189px;
+   }
+   
 }

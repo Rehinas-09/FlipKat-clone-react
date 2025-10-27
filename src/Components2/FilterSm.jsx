@@ -36,6 +36,9 @@ function FilterSm() {
    }
   const item = ["Price", "F-Assured", "Brand", "ScreenSize", "Resolution", "Display Technology", "Operating System", "Customer Rating", "GST Invoice Available", "Discount"]
   const [selected, setSelected] = useState("Price")
+  const [show,setShow]=useState(false)
+  const open=()=>setShow(true)
+  const close=()=>setShow(false)
   const priceRange = [
     { label: "Rs.15000 and Below", min: 0, max: 15000 },
     { label: "Rs.15000 and 30000", min: 15000, max: 30000 },
@@ -129,8 +132,34 @@ function FilterSm() {
              setDiscount(discount.filter((d) => d.label !== dis.label));
         }
      }
+     const getActiveFilter=()=>{
+      const active=[]
+      if(price.length>0) active.push("Price")
+      if(assured.length>0) active.push("F-Assured")
+       if(brand.length>0) active.push("Brand")
+        if(screen.length>0) active.push("Secreen Size")
+       if(resolution.length>0) active.push("Resolution");
+      if(display.length>0) active.push("Display Technology")
+        if(os.length>0) active.push("Operating System")
+       if(rating.length>0) active.push("Customer Rating")
+        if(invoice.length>0) active.push("GST Invoice Available")
+        if(discount.length>0) active.push("Discount")
+          return active;  
+     }
+    const isFilterSelected=price.length>0||
+                           assured==true||
+                           brand.length>0||
+                           screen.length>0|| 
+                           resolution.length>0||
+                           os.length>0||
+                           display.length>0||
+                           rating.length>0||
+                           invoice.length>0||
+                           discount.length>0
+
   return (
     <div className='filterSmContainer'>
+    {show&&<div className='overlay' onClick={close}></div>}
       <div className='filterSmSub'>
         <div className='filterSmPadding'>
           <div className='filterSmboxes'>
@@ -153,7 +182,7 @@ function FilterSm() {
 
                 </div>
               </div>
-            </div>
+            </div> 
             <div className='filterSmcheck'>
               <div className='filterSmcheksub'>
                 {
@@ -182,7 +211,7 @@ function FilterSm() {
                               </label>
                             </div>
                           </div>
-                        ))
+                        )) 
 
                       }
                     </div>
@@ -363,10 +392,70 @@ function FilterSm() {
                 <h1 className='fcheadsub'>Filters</h1>
               </div>
             </div>
-            <a className='fcclear'>
-              <span className='fcspan'>Clear Filter</span>
-            </a>
+            { 
+              isFilterSelected&&( 
+                  <a className='fcclear'>
+                  <span className='fcspan' onClick={open}>Clear Filter</span>
+                   </a>
+              )
+            }
+    
           </div>
+        </div>
+        <div className={`filterMainSection smSortContainer ${show?"show":""}`} >
+          <div className='filterMainSub'>
+            <div className='filterContent'>
+              <div className='clearfilterinto'>
+                  <a className='filtersvg'>
+                    <svg width="15" height="15" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M1.054 1l10.543 10.65m.054-10.596L1 11.597" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+                  </a>
+                  <div className='clearthing'>Clear</div>
+              </div>
+              <div className='clearinformation'>
+                <div className='clearFil'>
+                  Clear Filters
+                </div>
+                <div className='clearfilgray'>
+                  Would you like to clear the following filters?
+                </div> 
+              </div> 
+            
+                {
+                  getActiveFilter().map((filter,index)=>(
+                       <div key={index}>
+                     <div className='filtercheckboxcontent'>
+                 
+                          <input type='checkbox' checked={true}></input>
+                     <div className='itemsection'>{filter}</div>
+                    </div>  
+                       </div>
+                  ))
+                }
+            
+         
+              <div className='clearbox'>
+                 <div className='cancelboxone'>
+                     Cancel
+                 </div>
+                 <div className='clearboxtwo' onClick={()=>{setPrice([]);
+                       setAssured(false);
+                       setBrand([]);
+                       setScreen([]);
+                       setResolution([]);
+                       setDisplay([]);
+                        setOs([]);
+                        setRating([])
+                        setInvoice(false);
+                        setDiscount([]);
+                      close()
+                       window.location.reload() }}
+                        >
+                     Clear
+                 </div>
+              </div>
+            </div>
+          </div>
+         
         </div>
         <div className='apply-head'>
           <div className='apply-headsub'>
@@ -389,9 +478,18 @@ function FilterSm() {
 
           </div>
         </div>
+        <div>
+          
+        </div>
+    
    
       </div>
+      <div>
+    
+      </div>
+      
     </div>
+    
   )
 }
 

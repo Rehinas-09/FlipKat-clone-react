@@ -42,7 +42,7 @@ function Parent2() {
         <div className='sm-parent-head'> 
           {showSort&&<div className='overlay' onClick={close}></div>}
           <div className={`productdim ${showSort?"dimmed":""}`}> 
-          <SmNavbar onOpen={open} />
+          <SmNavbar onOpen={open} /> 
           
           <div className='sm-main-container'>
             <Smimage/>

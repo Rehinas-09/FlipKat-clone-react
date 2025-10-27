@@ -8,7 +8,7 @@ function Filter(){
             assured,
            setAssured,
            brand,
-           setBrand,
+           setBrand, 
            screen,
            setScreen,
            uniqueBrand,
@@ -41,11 +41,23 @@ function Filter(){
         setDiscount([])
 
     }
-    const isFilterSelected=price.length>0||
+   const filters = [
+  { name: "Price", value: price, setValue: setPrice },
+  { name: "Assured", value: assured, setValue: setAssured },
+  { name: "Brand", value: brand, setValue: setBrand },
+  { name: "Resolution", value: resolution, setValue: setResolution },
+  { name: "Display", value: display, setValue: setDisplay },
+  { name: "OS", value: os, setValue: setOs },
+  { name: "Rating", value: rating, setValue: setRating },
+  { name: "Invoice", value: invoice, setValue: setInvoice },
+  { name: "Discount", value: discount, setValue: setDiscount }
+];
+    
+    const isFilterSelected=price.length>0|| 
                            assured==true||
                            brand.length>0||
                            screen.length>0|| 
-                           resolution.legth>0||
+                           resolution.length>0||
                            os.length>0||
                            display.length>0||
                            rating.length>0||
@@ -76,12 +88,12 @@ function Filter(){
    } 
      const screenSizeRange=[
            {label:"40 - 43 inch",min:40,max:43},
-           {label:"28 - 32 inch",min:28,max:32}  
+           {label:"28 - 32 inch",min:28,max:32}
       ] 
      const handleResolution=(data,checked)=>{
         if(checked){
            setResolution([...resolution,data])
-          }
+          } 
            else{ 
          setResolution(resolution.filter((r)=>r!==data))
      }
@@ -140,16 +152,27 @@ function Filter(){
               setOs(os.filter((d)=>d!==data))
           }
        } 
-
+   function handleSingleClear(item) {
+  if (Array.isArray(item.value)) {
+    item.setValue([]);
+  } 
+  else if (typeof item.value === 'boolean') {
+    item.setValue(false);
+  } 
+  else {
+    item.setValue('');
+  }
+}
     return (
         <div className='filterContainer'>
+
             <div className='filterContainerSub'> 
                 <div className='filterContainerMid'>
                     <div className='filterSection1'>
                         <div className='filterSection1Sub'>
-                            <div className='filterHead'>
+                            <div className='fmmm'>
                                 <span>Filters</span>
-                            </div>
+                            </div> 
                             {
                                 isFilterSelected&&(
                                       <div className='filterclearall' onClick={handleClearAll}>
@@ -158,11 +181,17 @@ function Filter(){
                                 )
                             } 
                         </div>
-                        <div className='itemClearSection'>
-                           <div className='itemClearSectionSub'>
-                            
-                           </div>
-                        </div>
+                         <div className='itemClearSection'>
+                          {isFilterSelected && filters.map((item, index) => (
+                     item.value && item.value.length !== 0 && (
+                  <div className='itemClearSectionSub' key={index} onClick={()=>handleSingleClear(item)}>
+                    <div className='clearX'>X</div>
+             <div className='filterItem'>{item.value}</div>
+    </div> 
+  )
+))}
+
+                         </div>
                     </div>
                     <div className='filterCategories'>
                         <div className='filterCategorySection'>
@@ -258,7 +287,7 @@ function Filter(){
                         </div>
                         <div className='Qmark'>
                             <span className='QmarkSpan'>?</span>
-                        </div>
+                        </div> 
                     </div>
                     
         

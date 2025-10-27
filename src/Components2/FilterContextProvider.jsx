@@ -14,8 +14,7 @@ function FilterContextProvider({children}) {
     const [invoice,setInvoice]=useState(false) 
     const [discount,setDiscount]=useState([])
     const [min,setMin]=useState([])
-  
-
+ 
     useEffect(()=>{
         fetch("TvData.json")
         .then(res=>res.json())
