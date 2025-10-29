@@ -13,13 +13,13 @@ function Filter(){
            setScreen,
            uniqueBrand,
            resolutionUnique,
-           setResolution,
+           setResolution, 
            resolution,
            display,
            setDisplay,
            displayUnique,
            os,
-           setOs,
+           setOs, 
            osUnique,
            rating,
            setRating,
@@ -29,7 +29,7 @@ function Filter(){
            setDiscount
         }=useContext(FilterContext)
     const handleClearAll=()=>{
-        setPrice([])
+        setPrice({min:0,max:70000})
         setAssured(false)
         setBrand([])
         setScreen([])
@@ -53,7 +53,7 @@ function Filter(){
   { name: "Discount", value: discount, setValue: setDiscount }
 ];
     
-    const isFilterSelected=price.length>0|| 
+    const isFilterSelected=price.min!==0||price.max!==70000|| 
                            assured==true||
                            brand.length>0||
                            screen.length>0|| 
@@ -63,7 +63,7 @@ function Filter(){
                            rating.length>0||
                            invoice.length>0||
                            discount.length>0
-    const handleMinChange = (e) => { 
+    const handleMinChange = (e) => {  
         const newMin = Number(e.target.value) 
         console.log(newMin) 
         setPrice({ min: newMin, max: price.max })
@@ -152,8 +152,13 @@ function Filter(){
               setOs(os.filter((d)=>d!==data))
           }
        } 
-   function handleSingleClear(item) {
-  if (Array.isArray(item.value)) {
+  function handleSingleClear(item) {
+
+  if (typeof item.value === 'object' && item.value.min !== undefined) {
+    item.setValue({ min: 0, max: 70000 });
+  } 
+
+  else if (Array.isArray(item.value)) {
     item.setValue([]);
   } 
   else if (typeof item.value === 'boolean') {
@@ -163,6 +168,7 @@ function Filter(){
     item.setValue('');
   }
 }
+
     return (
         <div className='filterContainer'>
 
@@ -181,17 +187,39 @@ function Filter(){
                                 )
                             } 
                         </div>
-                         <div className='itemClearSection'>
-                          {isFilterSelected && filters.map((item, index) => (
-                     item.value && item.value.length !== 0 && (
-                  <div className='itemClearSectionSub' key={index} onClick={()=>handleSingleClear(item)}>
-                    <div className='clearX'>X</div>
-             <div className='filterItem'>{item.value}</div>
-    </div> 
-  )
-))}
+                                <div className='itemClearSection'>
+  {isFilterSelected && filters.map((item, index) => {
+    // skip empty filters
+    if (
+      (Array.isArray(item.value) && item.value.length === 0) ||
+      (!Array.isArray(item.value) && !item.value)
+    ) return null;
 
-                         </div>
+    // handle object display
+    let displayValue = '';
+    if (typeof item.value === 'object' && item.value !== null) {
+      if ('min' in item.value && 'max' in item.value) {
+        displayValue = `₹${item.value.min} - ₹${item.value.max}`;
+      } else {
+        displayValue = JSON.stringify(item.value);
+      }
+    } else {
+      displayValue = item.value;
+    }
+
+    return (
+      <div
+        className='itemClearSectionSub'
+        key={index}
+        onClick={() => handleSingleClear(item)}
+      >
+        <div className='clearX'>X</div>
+        <div className='filterItem'>{displayValue}</div>
+      </div>
+    );
+  })}
+</div>
+
                     </div>
                     <div className='filterCategories'>
                         <div className='filterCategorySection'>
